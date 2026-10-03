@@ -2,17 +2,21 @@
 
 A daily engineering portfolio covering AI Agents, LLMs, RAG, automation, APIs, GTM engineering, data/ML, and SaaS.
 
-## Structure
-
-Each day contains 3–4 focused builds. Every build includes runnable code and a README explaining the architecture, setup, and use case.
-
 ## Day 001
 
-1. **Agent Task Router** — routes a user request to the right specialist workflow.
-2. **Mini RAG API** — document ingestion + retrieval + context-grounded answering.
-3. **Lead Enrichment API** — normalizes a lead and produces a GTM-ready qualification profile.
-4. **ML Lead Scoring** — trains a small classification model and exposes predictions through an API.
+1. Agent Task Router
+2. Mini RAG API
+3. Lead Enrichment API
+4. ML Lead Scoring
+5. AI Support Copilot
 
-## Philosophy
+## Day 002
 
-Build small, complete systems. Prefer working APIs, clear interfaces, tests, and documentation over toy snippets.
+1. Agent Workflow Orchestrator — typed multi-agent planning and execution.
+2. RAG Knowledge Service — SQLite-backed retrieval API with source metadata.
+3. GTM Signal Pipeline — transparent intent scoring and sales prioritization.
+4. LLM Evaluation and Regression Lab — deterministic provider abstraction and regression gates.
+
+## Engineering Standard
+
+Build complete systems rather than isolated snippets. Projects emphasize clear module boundaries, typed inputs, persistence where useful, tests, APIs, local fallbacks, and documentation.

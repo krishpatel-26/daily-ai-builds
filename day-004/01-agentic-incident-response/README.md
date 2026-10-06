@@ -1,20 +1,25 @@
 # Agentic Incident Response Engine
 
-A production-minded AI incident triage system that turns noisy service alerts into an explainable incident plan. It combines deterministic signal normalization, specialist agents, severity scoring, runbook retrieval, action planning, and an auditable execution boundary.
+A production-minded incident triage system that turns noisy alerts into an explainable response plan.
 
-## Architecture
-`ingest -> normalize -> classify -> specialist analysis -> runbook retrieval -> plan -> approval boundary`
+**Architecture:** alerts → enrichment → specialist agents → severity scoring → evidence lineage → runbook retrieval → policy gate → human approval → audit trail.
 
-The default runtime is deterministic and local. External LLMs and observability systems can be added behind provider interfaces without changing the orchestration contract.
+### Governance layer
+- deterministic evidence IDs for lineage
+- configurable confidence threshold
+- mandatory approval for high/critical incidents
+- explicit approve/reject API
+- SQLite audit trail with actor and timestamp
+- no automatic destructive remediation
 
-## Run
+### Run
 ```bash
 python -m venv .venv
 pip install -r requirements.txt
 uvicorn app.api:app --reload
+pytest
 ```
 
-POST `/v1/incidents/analyze` with an incident payload. Run `pytest` for tests.
+POST `/v1/incidents/analyze`, then use the returned `incident_id` with `/v1/incidents/{incident_id}/approval`. Retrieve the full decision history from `/v1/incidents/{incident_id}/audit`.
 
-## Safety
-The engine generates proposed actions but never executes destructive remediation automatically. Production integrations should sit behind an explicit approval/execution adapter.
+External LLMs and observability systems can be added behind provider adapters; the default path remains deterministic and local.

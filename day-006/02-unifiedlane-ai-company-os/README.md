@@ -20,33 +20,30 @@ Research | Strategy | Content | Operations | Outreach | Analytics
 Audit Events + Observability + Human Approval + Outputs
 ```
 
+## Concrete workflow: B2B lead generation
+
+The repo now includes a runnable, safe example that qualifies fictional prospects, explains lead scores, drafts personalized outreach, and keeps every draft pending human approval.
+
+```bash
+pip install -e ".[dev]"
+python examples/lead_generation_demo.py
+pytest
+```
+
+The example uses fictional companies and sends zero messages. Approval is recorded separately from delivery; no CRM or email integration is connected.
+
+See [the workflow walkthrough](docs/lead-generation-workflow.md).
+
 ## Included in this MVP
 
 - Role-based capabilities and least-privilege authorization.
 - Task routing to six specialist agent roles.
 - Risk-aware approval gates for external or sensitive actions.
 - Structured audit events for allow/deny/approval decisions.
+- Illustrative lead scoring with transparent rationale.
+- Outreach drafts with explicit human approval; no automatic sending.
 - Simple in-memory orchestration so the policy model is easy to inspect.
-- Tests for routing, permissions, and approval requirements.
-
-## Quick start
-
-Requires Python 3.11+.
-
-```bash
-python -m venv .venv
-# macOS/Linux
-source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
-pip install -e ".[dev]"
-pytest
-```
-
-Run a demo:
-
-```bash
-python examples/demo.py
-```
+- Tests for routing, permissions, approval requirements, and lead workflow behavior.
 
 ## Example policy
 
@@ -59,5 +56,6 @@ An outreach agent may draft a message, but sending it is classified as an extern
 3. Integrate identity-aware secrets, sandboxed tools, and per-tenant policy enforcement.
 4. Add OpenTelemetry traces, token/cost budgets, rate limits, and SLO dashboards.
 5. Add approval UI, policy versioning, retention controls, and adversarial evaluations.
+6. Connect authorized research/CRM/email adapters with independent permission checks and delivery safeguards.
 
 This repository is an architecture/MVP reference, not a fully autonomous production deployment. External integrations and real model calls are intentionally stubbed.

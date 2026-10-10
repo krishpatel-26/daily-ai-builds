@@ -1,0 +1,1 @@
+ultralytics>=8.3.0\nopencv-python-headless>=4.9.0\nstreamlit>=1.36.0\npandas>=2.2.0\nPillow>=10.0.0\npytest>=8.0.0\n

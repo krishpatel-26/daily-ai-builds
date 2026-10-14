@@ -1,0 +1,10 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {normalizeInvoice,getInvoiceState,priorityScore,summarize} from "../src/domain.js";
+const base={client:"Client A",number:"INV-1",amount:100,issueDate:"2026-10-01",dueDate:"2026-10-10",status:"unpaid"};
+test("normalizes a valid invoice",()=>{const i=normalizeInvoice(base);assert.equal(i.client,"Client A");assert.equal(i.amount,100);assert.ok(i.id)});
+test("rejects missing client and nonpositive amount",()=>{assert.throws(()=>normalizeInvoice({...base,client:" "}));assert.throws(()=>normalizeInvoice({...base,amount:0}))});
+test("rejects due date before issue date",()=>assert.throws(()=>normalizeInvoice({...base,dueDate:"2026-09-30"})));
+test("calculates overdue, due today, and paid statuses",()=>{assert.equal(getInvoiceState(base,"2026-10-14").key,"overdue");assert.equal(getInvoiceState({...base,dueDate:"2026-10-14"},"2026-10-14").label,"Due today");assert.equal(getInvoiceState({...base,status:"paid"},"2026-10-14").key,"paid")});
+test("older overdue invoice ranks higher than upcoming invoice",()=>{assert.ok(priorityScore(base,"2026-10-14")>priorityScore({...base,dueDate:"2026-11-10"},"2026-10-14"))});
+test("summary ignores paid amount from outstanding",()=>{const s=summarize([base,{...base,id:"2",number:"INV-2",status:"paid",amount:50}],"2026-10-14");assert.equal(s.outstanding,100);assert.equal(s.paidCount,1)});

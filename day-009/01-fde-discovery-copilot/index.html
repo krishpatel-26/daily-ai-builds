@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local-first prototype that turns discovery-call notes into evidence-linked FDE actions and GTM follow-ups.">
+  <title>FDE Discovery Copilot · Day 009</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">F</span><span>FIELDNOTES <small>FDE DISCOVERY COPILOT</small></span></a>
+    <span class="pill">DAY 009 · LOCAL PROTOTYPE</span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">CUSTOMER EVIDENCE → ENGINEERING ACTION</p>
+      <h1>Turn discovery calls<br><em>into the next right action.</em></h1>
+      <p class="subhead">Paste call notes. Find customer pain, implementation blockers, success criteria, and follow-up actions without losing the evidence behind them.</p>
+    </section>
+    <section class="workspace">
+      <div class="panel input-panel">
+        <div class="panel-heading"><div><span class="step">01</span><h2>Discovery notes</h2></div><button id="load-demo" class="text-button">Load sample</button></div>
+        <label for="account">Account / customer</label>
+        <input id="account" value="Northstar Logistics" maxlength="100">
+        <label for="notes">Call transcript or notes</label>
+        <textarea id="notes" rows="11" placeholder="Paste discovery notes here. Remove sensitive customer data before using this local prototype."></textarea>
+        <div class="form-foot"><span id="char-count">0 characters</span><button id="analyze" class="primary">Analyze notes <span>↗</span></button></div>
+        <p class="privacy-note">Runs in your browser. No API calls, uploads, or automatic messages.</p>
+      </div>
+      <div class="panel results-panel">
+        <div class="panel-heading"><div><span class="step">02</span><h2>Action brief</h2></div><span id="status" class="status">WAITING FOR NOTES</span></div>
+        <div id="empty" class="empty-state"><div class="empty-icon">↳</div><h3>Your brief starts here.</h3><p>Analyze notes to extract evidence-backed signals and practical next steps.</p></div>
+        <div id="results" hidden>
+          <div class="summary-grid">
+            <div class="metric"><span>Signals found</span><strong id="signal-count">0</strong></div>
+            <div class="metric"><span>Suggested actions</span><strong id="action-count">0</strong></div>
+            <div class="metric"><span>Confidence</span><strong id="confidence">—</strong></div>
+          </div>
+          <h3 class="section-label">Evidence-linked signals</h3>
+          <div id="signals" class="signals"></div>
+          <h3 class="section-label">Suggested next actions</h3>
+          <div id="actions" class="actions"></div>
+          <div class="export-row"><button id="copy-brief" class="secondary">Copy brief</button><button id="download-json" class="secondary">Export JSON</button><button id="draft-followup" class="primary">Draft follow-up ↗</button></div>
+          <div id="followup-wrap" hidden><label for="followup">Human-reviewed follow-up draft</label><textarea id="followup" rows="7"></textarea><button id="copy-followup" class="secondary">Copy follow-up</button></div>
+        </div>
+      </div>
+    </section>
+    <footer><span>FIELDNOTES / DAY 009</span><span>Heuristics, not AI inference · Review before acting</span></footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

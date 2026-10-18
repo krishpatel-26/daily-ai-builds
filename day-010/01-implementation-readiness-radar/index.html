@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A local-first FDE and GTM implementation readiness workspace."><title>Implementation Readiness Radar</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="logo">R</span><span>FIELDOPS <small>IMPLEMENTATION READINESS RADAR</small></span></a><span class="day">DAY 010 · BUILD IN PUBLIC</span></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">FDE × GTM ENGINEERING</p><h1>Know what blocks<br><em>the customer launch.</em></h1><p class="intro">Turn implementation signals into a transparent readiness score, named blockers, and a reviewable launch plan.</p></section>
+<section class="toolbar"><div><label for="account">Customer account</label><input id="account" value="Northstar Logistics" maxlength="100"></div><div><label for="target-date">Target launch date</label><input id="target-date" type="date" value="2026-11-20"></div><div class="toolbar-actions"><button id="load-demo" class="quiet">Load demo</button><button id="reset" class="quiet">Reset</button></div></section>
+<section class="layout">
+<article class="panel checklist-panel"><div class="panel-head"><div><span class="step">01</span><h2>Readiness checklist</h2></div><span id="progress-label" class="muted">0 / 12 complete</span></div><p class="helper">Mark an item complete only when there is evidence. Unknown is not the same as ready.</p><div id="checklist" class="checklist"></div><div class="form-actions"><button id="export" class="secondary">Export assessment JSON</button><button id="copy-plan" class="primary">Generate launch plan ↗</button></div></article>
+<aside class="right-col">
+<article class="panel score-panel"><div class="panel-head"><div><span class="step">02</span><h2>Launch readiness</h2></div><span id="readiness-label" class="status">NEEDS REVIEW</span></div><div class="score-row"><div id="score" class="score">0<small>/100</small></div><div><div class="meter"><span id="meter-fill"></span></div><p id="score-summary" class="helper">Complete the checklist to assess launch readiness.</p></div></div><div class="stats"><div><span>Open blockers</span><strong id="blocker-count">0</strong></div><div><span>Evidence coverage</span><strong id="evidence-coverage">0%</strong></div><div><span>Days to launch</span><strong id="days-left">—</strong></div></div></article>
+<article class="panel"><div class="panel-head"><div><span class="step">03</span><h2>Priority blockers</h2></div></div><div id="blockers" class="blockers"><p class="helper">Your highest-priority blockers will appear here.</p></div></article>
+<article class="panel"><div class="panel-head"><div><span class="step">04</span><h2>Launch plan</h2></div></div><div id="plan" class="plan-empty">Generate a launch plan after reviewing readiness signals.</div><div id="plan-actions" class="form-actions" hidden><button id="copy-plan-text" class="secondary">Copy plan</button><button id="download-plan" class="secondary">Download Markdown</button></div></article>
+</aside></section>
+<footer><span>FIELDOPS / DAY 010</span><span>Local-first prototype · Heuristic score · Human review required</span></footer>
+</main><script src="app.js"></script></body></html>

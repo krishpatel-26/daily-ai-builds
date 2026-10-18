@@ -1,0 +1,5 @@
+[
+  {"case":"zero complete","completed":[],"expectedScore":0},
+  {"case":"all complete","completed":["scope","sponsor","access","integration","security","data","workflow","training","monitoring","rollback","acceptance","handoff"],"expectedScore":100},
+  {"case":"partial demo","completed":["scope","sponsor","workflow","training"],"expectedScore":30}
+]

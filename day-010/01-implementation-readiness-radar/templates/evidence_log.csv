@@ -1,0 +1,4 @@
+item_id,evidence_description,evidence_url,verified_by,verified_at,status
+integration,Example end-to-end test result,https://example.invalid/test-run,Reviewer Name,2026-10-18,unverified
+security,Example security approval reference,,Reviewer Name,,open
+acceptance,Example customer acceptance record,,Customer Owner,,open

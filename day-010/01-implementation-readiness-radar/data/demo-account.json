@@ -1,0 +1,6 @@
+{
+  "account": "Northstar Logistics",
+  "targetDate": "2026-11-20",
+  "completed": ["scope", "sponsor", "workflow", "training"],
+  "note": "Synthetic example only. No real customer data."
+}

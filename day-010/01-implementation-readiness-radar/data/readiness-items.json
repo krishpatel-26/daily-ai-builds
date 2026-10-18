@@ -1,0 +1,14 @@
+[
+  {"id":"scope","title":"Scope and success criteria agreed","category":"Discovery","weight":10,"owner":"FDE + customer"},
+  {"id":"sponsor","title":"Customer owner and executive sponsor named","category":"Ownership","weight":7,"owner":"Account owner"},
+  {"id":"access","title":"Required system access provisioned","category":"Technical","weight":10,"owner":"Customer IT + FDE"},
+  {"id":"integration","title":"Integration path tested end to end","category":"Technical","weight":12,"owner":"FDE"},
+  {"id":"security","title":"Security and compliance review cleared","category":"Risk","weight":12,"owner":"Security owner"},
+  {"id":"data","title":"Data quality and mapping validated","category":"Data","weight":9,"owner":"Customer data owner"},
+  {"id":"workflow","title":"Target user workflow mapped","category":"Adoption","weight":7,"owner":"FDE + customer success"},
+  {"id":"training","title":"Training and enablement scheduled","category":"Adoption","weight":6,"owner":"Customer success"},
+  {"id":"monitoring","title":"Monitoring and escalation path configured","category":"Operations","weight":7,"owner":"Engineering"},
+  {"id":"rollback","title":"Rollback and recovery plan documented","category":"Operations","weight":6,"owner":"Engineering + customer IT"},
+  {"id":"acceptance","title":"Customer acceptance test passed","category":"Validation","weight":9,"owner":"Customer owner + FDE"},
+  {"id":"handoff","title":"Support and GTM handoff completed","category":"GTM","weight":5,"owner":"Account owner + support"}
+]

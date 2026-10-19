@@ -39,3 +39,13 @@ CSV sensor telemetry analysis, timestamp-gap detection, potential spike detectio
 [Portfolio project index](PORTFOLIO_PROJECTS.md) · [LinkedIn launch post draft](LINKEDIN_PORTFOLIO_LAUNCH_POST.md)
 
 Note: these are early prototypes with manual test checklists. Browser QA and complete automated test execution remain outstanding; heuristic output should be treated as a candidate for review rather than validated ground truth.
+
+
+## Day 014 — Agent Reliability Workbench
+A local-first evaluation workbench for regression cases, pass/fail/review outcomes, synthetic traces, prompt risk checks, and a dependency-free Python CLI with deterministic graders and unit tests.
+
+- [Open the project](https://github.com/krishpatel-26/daily-ai-builds/tree/main/day-014/01-agent-reliability-workbench)
+- [Read the project README](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-014/01-agent-reliability-workbench/README.md)
+- [LinkedIn post draft](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-014/01-agent-reliability-workbench/docs/POST_COPY.md)
+
+Important: the UI's run history and timings are synthetic demo data. The Python CLI runs deterministic checks against fixed output samples; no live model provider is invoked. Browser QA and Python tests still need to be run before presenting test status as verified.

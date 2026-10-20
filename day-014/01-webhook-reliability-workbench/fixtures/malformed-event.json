@@ -1,0 +1,5 @@
+{
+  "event_id": "evt_invalid_1043",
+  "created_at": "not-a-timestamp",
+  "data": ["expected", "object"]
+}

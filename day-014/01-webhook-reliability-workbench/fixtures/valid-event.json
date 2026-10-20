@@ -1,0 +1,11 @@
+{
+  "event_id": "evt_valid_1042",
+  "event_type": "order.created",
+  "created_at": "2026-10-20T10:45:00Z",
+  "data": {
+    "order_id": "ord_219",
+    "customer_id": "cus_781",
+    "total": 86.5,
+    "currency": "USD"
+  }
+}

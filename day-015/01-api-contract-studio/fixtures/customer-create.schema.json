@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Create Customer Request",
+  "type": "object",
+  "required": ["email", "name", "plan"],
+  "properties": {
+    "name": {"type": "string", "minLength": 2, "maxLength": 80},
+    "email": {"type": "string", "minLength": 5, "maxLength": 120, "format": "email"},
+    "plan": {"type": "string", "enum": ["starter", "growth", "enterprise"]},
+    "seats": {"type": "integer", "minimum": 1, "maximum": 500},
+    "metadata": {"type": "object", "properties": {"source": {"type": "string"}}}
+  }
+}

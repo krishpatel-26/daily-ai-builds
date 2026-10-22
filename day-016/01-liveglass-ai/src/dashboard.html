@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LiveGlass AI</title><link rel="stylesheet" href="dashboard.css"></head>
+<body><main class="shell">
+<header class="topbar"><div class="brandmark">LG</div><div><p class="eyebrow">DESKTOP TRANSLATION</p><h1>LiveGlass <span>AI</span></h1></div><div class="pill"><i id="statusDot"></i><span id="mode">IDLE</span></div></header>
+<section class="hero card"><div><p class="eyebrow">YOUR SCREEN, IN ENGLISH</p><h2>Understand without switching windows.</h2><p class="muted">Local OCR · Local translation first · Transparent overlay</p></div><button id="toggleButton" class="primary">Start live translation</button></section>
+<section class="grid"><article class="card"><p class="eyebrow">SCAN CONTROLS</p><h3>Translation session</h3><p id="statusMessage" class="muted">Ready to translate.</p><div class="buttonrow"><button id="scanButton">Scan once</button><button id="clearButton" class="ghost">Clear overlay</button></div><p class="hint">Ctrl+Shift+L to toggle · O to show controls · K to clear</p></article>
+<article class="card"><p class="eyebrow">LIVE RESULTS</p><div class="metric" id="lineCount">0</div><p class="muted">translated text lines</p><div class="divider"></div><p class="muted">Engine: <strong id="engine">Not run yet</strong></p></article></section>
+<section class="card settings"><div class="sectiontitle"><div><p class="eyebrow">PREFERENCES</p><h3>Translation settings</h3></div><button id="saveButton" class="primary small">Save settings</button></div>
+<div class="formgrid"><label>Source language<select id="sourceLanguage"><option value="de">German</option><option value="fr">French</option><option value="es">Spanish</option><option value="it">Italian</option><option value="pt">Portuguese</option><option value="nl">Dutch</option><option value="tr">Turkish</option><option value="ru">Russian</option><option value="ja">Japanese</option><option value="zh">Chinese</option><option value="en">English</option><option value="auto">Auto / English OCR</option></select></label>
+<label>Scan interval<select id="intervalSeconds"><option value="3">3 seconds</option><option value="4">4 seconds</option><option value="6">6 seconds</option><option value="8">8 seconds</option><option value="12">12 seconds</option></select></label>
+<label class="range-label">Glass opacity <span id="opacityValue">92%</span><input id="opacity" type="range" min="50" max="100" value="92"></label>
+<label class="check"><input id="apiFallback" type="checkbox"><span>Allow API fallback when local translation is unavailable</span></label>
+<label>Translation API endpoint<input id="apiEndpoint" type="url" placeholder="https://libretranslate.com/translate"></label>
+<label>API key (optional)<input id="apiKey" type="password" autocomplete="off" placeholder="Stored on this device"></label></div>
+<p class="privacy-note">OCR is local. Enabling API fallback sends recognized text to the configured endpoint. Do not scan confidential screens with an endpoint you do not trust.</p></section>
+<footer><span>LIVEGLASS AI · MVP 0.1.0</span><span>Primary display · Windows 10/11</span></footer></main><script src="dashboard.js"></script></body></html>

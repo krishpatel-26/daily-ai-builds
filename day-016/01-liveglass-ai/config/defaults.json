@@ -1,0 +1,9 @@
+{
+  "sourceLanguage": "de",
+  "targetLanguage": "en",
+  "intervalSeconds": 4,
+  "opacity": 92,
+  "apiFallback": false,
+  "apiEndpoint": "https://libretranslate.com/translate",
+  "note": "Runtime settings are persisted in Electron userData."
+}

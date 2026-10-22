@@ -1,0 +1,29 @@
+{
+  "name": "liveglass-ai",
+  "version": "0.1.0",
+  "description": "Local-first Windows screen translation overlay",
+  "private": true,
+  "license": "MIT",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check src/main.js && node --check src/preload.js && node --check src/dashboard.js && node --check src/overlay.js && node --check src/translator.js",
+    "dist:win": "electron-builder --win nsis --x64"
+  },
+  "dependencies": {
+    "electron": "^44.0.0",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "ai.liveglass.desktop",
+    "productName": "LiveGlass AI",
+    "asar": true,
+    "asarUnpack": ["scripts/**/*"],
+    "files": ["src/**/*", "scripts/**/*", "config/**/*", "package.json", "README.md", "LICENSE"],
+    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }] },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true, "createStartMenuShortcut": true }
+  }
+}

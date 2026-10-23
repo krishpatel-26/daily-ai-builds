@@ -1,0 +1,14 @@
+{
+  "version": "0.1",
+  "rules": [
+    {"id":"AUTH-401","severity":"critical","signal":"401 / expired or invalid token","action":"Verify token validity, audience, issuer and minimum required scopes."},
+    {"id":"DNS","severity":"critical","signal":"DNS resolution or connection refused","action":"Verify host, private DNS, VPN, firewall and service availability."},
+    {"id":"PERM-403","severity":"high","signal":"403 / forbidden","action":"Check documented role and scope requirements; request minimum permission."},
+    {"id":"RATE-429","severity":"high","signal":"429 / Retry-After","action":"Honor Retry-After, bounded exponential backoff and agreed quotas."},
+    {"id":"UPSTREAM-5XX","severity":"high","signal":"5xx / gateway errors","action":"Correlate request IDs and timestamps; check upstream and gateway logs."},
+    {"id":"TIMEOUT","severity":"high","signal":"timeouts / deadline exceeded","action":"Measure latency and tune bounded timeout/deadline behavior."},
+    {"id":"SCHEMA-400","severity":"high","signal":"400 / 422 / schema mismatch","action":"Compare sanitized payload against the active contract."},
+    {"id":"ENV-HTTP","severity":"high","signal":"HTTP API base URL","action":"Use an approved HTTPS endpoint."},
+    {"id":"ENV-TLS","severity":"high","signal":"TLS verification disabled","action":"Restore certificate verification and trust-chain configuration."}
+  ]
+}

@@ -1,0 +1,10 @@
+2026-10-23T10:05:13Z INFO integration-runner starting customer-sync
+2026-10-23T10:05:13Z INFO POST https://api.customer.example/v1/customers
+2026-10-23T10:05:14Z ERROR HTTP 401 Unauthorized: access token expired
+2026-10-23T10:05:14Z WARN retry scheduled in 1000ms attempt=1
+2026-10-23T10:05:16Z ERROR HTTP 429 rate limit exceeded; Retry-After: 30
+2026-10-23T10:05:17Z WARN retry scheduled in 1000ms attempt=2
+2026-10-23T10:05:19Z ERROR request timeout after 3000ms
+2026-10-23T10:05:20Z INFO payload validation failed: missing required field customer_id
+2026-10-23T10:05:20Z DEBUG Authorization: Bearer sk_live_DEMO_REDACT_ME_NOT_REAL
+2026-10-23T10:05:21Z INFO run completed with errors

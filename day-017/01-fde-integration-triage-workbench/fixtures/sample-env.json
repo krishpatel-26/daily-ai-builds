@@ -1,0 +1,9 @@
+{
+  "environment": "production",
+  "base_url": "http://api.customer.example",
+  "auth_type": "bearer",
+  "timeout_ms": 2500,
+  "retry_attempts": 1,
+  "webhook_signature_validation": false,
+  "verify_tls": false
+}

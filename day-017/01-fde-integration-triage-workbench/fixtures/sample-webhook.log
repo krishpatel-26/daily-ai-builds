@@ -1,0 +1,4 @@
+2026-10-23T11:21:00Z INFO received webhook event=customer.updated
+2026-10-23T11:21:00Z ERROR signature verification failed
+2026-10-23T11:21:00Z WARN rejecting webhook event with invalid signature
+2026-10-23T11:21:00Z INFO request_id=req_demo_19351

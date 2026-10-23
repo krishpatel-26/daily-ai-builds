@@ -1,0 +1,10 @@
+{
+  "environment": "staging",
+  "base_url": "http://api.customer.example",
+  "auth_type": "bearer",
+  "timeout_ms": 3000,
+  "retry_attempts": 2,
+  "required_fields": ["customer_id", "email"],
+  "webhook_signature_validation": false,
+  "api_key": "demo_secret_value_not_real"
+}

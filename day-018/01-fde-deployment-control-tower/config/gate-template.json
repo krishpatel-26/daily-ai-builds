@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "gates": [
+    {"id":"discovery","name":"Discovery & success criteria","checks":["stakeholders","success","scope"]},
+    {"id":"connectivity","name":"Connectivity & environment","checks":["endpoint","network","smoke"]},
+    {"id":"authentication","name":"Identity & permissions","checks":["auth-method","scopes","rotation"]},
+    {"id":"contract","name":"API contract & data","checks":["schema","mapping","negative"]},
+    {"id":"observability","name":"Observability & reliability","checks":["correlation","timeouts","alerts"]},
+    {"id":"security","name":"Security & data handling","checks":["tls","webhook","data"]},
+    {"id":"uat","name":"Customer UAT & acceptance","checks":["happy-path","negative-path","signoff"]},
+    {"id":"rollback","name":"Go-live & rollback","checks":["change-window","rollback","monitoring"]}
+  ]
+}

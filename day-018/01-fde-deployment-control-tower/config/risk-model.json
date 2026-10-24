@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "score": {
+    "base": 100,
+    "check_completion": "satisfied required checks / all required checks * 100",
+    "open_blocker_penalties": {"critical":18,"high":10,"medium":4,"low":1},
+    "minimum": 0,
+    "note": "Heuristic indicator only; not a probability or production release certification."
+  },
+  "decision": {
+    "NO-GO": "Any critical open blocker or any required failed check.",
+    "CONDITIONAL": "Open blockers or evidence gaps remain.",
+    "GO-TO-REVIEW": "All required checks pass or are N/A, evidence is present, all blockers are closed, and scope context is complete."
+  }
+}

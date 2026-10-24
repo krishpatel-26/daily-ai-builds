@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "customer": "Northstar Retail",
+    "integration": "CRM -> Customer Data Platform sync",
+    "environment": "Staging",
+    "owner": "FDE / Integration Team",
+    "targetDate": "2026-10-30",
+    "successCriteria": "Sync 100 synthetic customer records with zero duplicates; verify webhook signature and replay handling."
+  },
+  "fixture_notice": "Synthetic demo data only. Load the demo inside the app to create an editable working copy."
+}

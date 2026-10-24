@@ -1,0 +1,12 @@
+{
+  "name": "fde-deployment-control-tower",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first deployment lifecycle and evidence control tower for FDEs",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check app.js && node --check src/core.js && node --check scripts/serve.js"
+  },
+  "engines": { "node": ">=18" }
+}

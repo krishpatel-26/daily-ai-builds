@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "requiredScenarioFields": ["id", "title", "method", "path", "mockResponse.status", "assertions"],
+  "supportedMethods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"],
+  "mockResponse": {
+    "status": "integer",
+    "headers": "string-to-string object",
+    "body": "JSON value",
+    "latencyMs": "non-negative number"
+  },
+  "assertions": {
+    "status": "expected HTTP status",
+    "requiredJsonPaths": ["dot-separated JSON paths that must exist"],
+    "forbiddenJsonPaths": ["dot-separated JSON paths that must be absent"],
+    "headersEqual": {"header-name": "expected header value"},
+    "maxLatencyMs": "maximum simulated mock latency",
+    "bodyEquals": {"dot.separated.path": "expected JSON value"}
+  }
+}

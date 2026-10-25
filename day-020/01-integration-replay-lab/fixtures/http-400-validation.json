@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/v1/customers",
+    "body": {"name": "Avery Chen", "email": "avery@example.test"}
+  },
+  "response": {
+    "status": 400,
+    "headers": {"content-type": "application/json"},
+    "body": {"error": "validation_error", "missing": ["customer_id"]},
+    "latencyMs": 42
+  },
+  "observedSymptom": "A create request returned 400 instead of the expected 201.",
+  "expectedNextStep": "Compare the sanitized payload with the request schema and required fields."
+}

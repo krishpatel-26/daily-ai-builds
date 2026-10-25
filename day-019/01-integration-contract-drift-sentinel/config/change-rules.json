@@ -1,0 +1,28 @@
+{
+  "version": "0.1",
+  "breaking": [
+    "operation removed",
+    "required request property added",
+    "optional operation parameter becomes required",
+    "new required parameter added",
+    "property removed",
+    "schema type changed",
+    "previously allowed enum value removed",
+    "response status removed",
+    "extra properties become disallowed"
+  ],
+  "additive": [
+    "new operation added",
+    "optional request property added",
+    "optional parameter added",
+    "response status added",
+    "new enum value added",
+    "shared schema added"
+  ],
+  "review": [
+    "format changes",
+    "required response property becoming optional",
+    "semantics not represented in a supported schema keyword"
+  ],
+  "note": "Heuristic defaults for review prioritization; validate against the provider's compatibility policy."
+}

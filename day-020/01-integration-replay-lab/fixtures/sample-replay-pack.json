@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "name": "Customer Sync / Staging Replay",
+  "description": "Synthetic scenarios model an integration validation error, a healthy read and a rate-limited bulk request.",
+  "scenarios": [
+    {
+      "id": "create-missing-id",
+      "title": "Create customer fails when customer_id is missing",
+      "method": "POST",
+      "path": "/v1/customers",
+      "request": {"headers": {"content-type": "application/json"}, "body": {"name": "Avery Chen", "email": "avery@example.test", "legacy_code": "DEMO-OLD-14"}},
+      "mockResponse": {"status": 400, "headers": {"content-type": "application/json"}, "body": {"error": "validation_error", "message": "customer_id is required", "missing": ["customer_id"]}, "latencyMs": 42},
+      "assertions": {"status": 201, "requiredJsonPaths": ["id", "customer_id"], "maxLatencyMs": 500}
+    },
+    {
+      "id": "get-customer-happy-path",
+      "title": "Fetch customer returns expected object",
+      "method": "GET",
+      "path": "/v1/customers/cust_demo_01",
+      "request": {"headers": {"accept": "application/json"}},
+      "mockResponse": {"status": 200, "headers": {"content-type": "application/json"}, "body": {"customer": {"id": "cust_demo_01", "email": "avery@example.test", "status": "active"}}, "latencyMs": 35},
+      "assertions": {"status": 200, "requiredJsonPaths": ["customer.id", "customer.email", "customer.status"], "headersEqual": {"content-type": "application/json"}, "maxLatencyMs": 100}
+    },
+    {
+      "id": "rate-limit-retry-header",
+      "title": "Throttled response includes Retry-After",
+      "method": "POST",
+      "path": "/v1/customers/bulk",
+      "request": {"headers": {"content-type": "application/json"}, "body": {"count": 100}},
+      "mockResponse": {"status": 429, "headers": {"content-type": "application/json", "retry-after": "30"}, "body": {"error": "rate_limited", "retryable": true}, "latencyMs": 15},
+      "assertions": {"status": 429, "headersEqual": {"retry-after": "30"}, "requiredJsonPaths": ["retryable"], "bodyEquals": {"retryable": true}, "maxLatencyMs": 100}
+    }
+  ]
+}

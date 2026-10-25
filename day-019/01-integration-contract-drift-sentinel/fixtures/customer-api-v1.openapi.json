@@ -1,0 +1,62 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "Customer API", "version": "1.4.0" },
+  "paths": {
+    "/v1/customers": {
+      "post": {
+        "operationId": "createCustomer",
+        "summary": "Create a customer",
+        "parameters": [
+          { "name": "X-Region", "in": "header", "required": false, "schema": { "type": "string" } }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CustomerCreate" } } }
+        },
+        "responses": {
+          "201": { "description": "Created", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Customer" } } } },
+          "400": { "description": "Validation error" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/v1/customers/{id}": {
+      "get": {
+        "operationId": "getCustomer",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Customer" } } } },
+          "404": { "description": "Not found" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CustomerCreate": {
+        "type": "object",
+        "required": ["name", "email"],
+        "properties": {
+          "name": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "plan": { "type": "string", "enum": ["free", "pro"] },
+          "phone": { "type": "string" },
+          "legacy_code": { "type": "string" }
+        },
+        "additionalProperties": true
+      },
+      "Customer": {
+        "type": "object",
+        "required": ["id", "name", "email"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

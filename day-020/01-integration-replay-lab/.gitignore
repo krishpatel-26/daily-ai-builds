@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+customer-traces/
+exports/
+*.log
+coverage/
+.DS_Store
+Thumbs.db

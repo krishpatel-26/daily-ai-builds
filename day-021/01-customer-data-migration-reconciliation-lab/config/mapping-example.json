@@ -1,0 +1,15 @@
+{
+  "sourceKey": "customer_id",
+  "targetKey": "customer_id",
+  "mappings": [
+    {"source": "name", "target": "full_name"},
+    {"source": "email", "target": "email"},
+    {"source": "status", "target": "status"},
+    {"source": "plan", "target": "plan"}
+  ],
+  "normalization": {
+    "trim": true,
+    "lowercaseEmail": true
+  },
+  "note": "Use only fields required by the approved reconciliation scope."
+}

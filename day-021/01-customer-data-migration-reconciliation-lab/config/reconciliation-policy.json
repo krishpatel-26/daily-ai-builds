@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "categories": {
+    "missing": "A source key has no matching target key.",
+    "extra": "A target key has no source counterpart.",
+    "duplicate": "The selected identity key occurs more than once or is blank.",
+    "mismatch": "A mapped field differs after the selected normalization."
+  },
+  "score_penalties": {
+    "missing_record": 8,
+    "extra_record": 5,
+    "duplicate_key_group": 10,
+    "blank_key_row": 10,
+    "field_mismatch": 2
+  },
+  "note": "The score is a prioritization aid, not statistical migration confidence or business acceptance."
+}

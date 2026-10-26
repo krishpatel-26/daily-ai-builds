@@ -1,0 +1,6 @@
+customer_id,full_name,email,status,plan
+C-001,Avery Chen,avery@example.test,active,pro
+C-002,Jordan Lee,jordan@example.test,active,free
+C-003,Sam Rivera,sam@example.test,active,pro
+C-004,Alex Morgan,alex@example.test,active,free
+C-006,Casey Park,casey@example.test,active,enterprise

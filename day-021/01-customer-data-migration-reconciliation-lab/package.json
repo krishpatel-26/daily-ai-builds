@@ -1,0 +1,8 @@
+{
+  "name": "customer-data-migration-reconciliation-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first source-to-target CSV reconciliation and migration sign-off tooling for FDEs",
+  "scripts": {"start":"node scripts/serve.js","test":"node --test tests/*.test.js","check":"node --check app.js && node --check src/core.js && node --check scripts/serve.js"},
+  "engines": {"node": ">=18"}
+}

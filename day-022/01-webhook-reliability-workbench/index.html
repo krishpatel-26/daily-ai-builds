@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c111b">
+  <meta name="description" content="A local-first workbench for webhook delivery triage and evidence-backed handoffs.">
+  <title>SignalOps — Webhook Reliability Workbench</title><link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">S</span><div><strong>signalops</strong><small>FIELD ENGINEERING</small></div></div>
+    <div class="workspace-label">WORKSPACE</div>
+    <button class="nav-item active" type="button"><span>◉</span> Delivery overview</button>
+    <button class="nav-item" type="button" id="showRunbook"><span>≡</span> Incident runbook</button>
+    <div class="sidebar-bottom"><span class="status-dot"></span><span>LOCAL DEMO MODE</span><p>No requests leave this browser.</p></div>
+  </aside>
+  <main class="main-content">
+    <header class="topbar"><div><div class="eyebrow">INTEGRATIONS / RELIABILITY</div><h1>Webhook reliability</h1><p class="subtitle">Understand failed deliveries before they become customer incidents.</p></div><div class="topbar-right"><span class="pill pill-neutral">SIMULATED DATA</span><button id="exportReport" class="button button-primary">Export handoff ↗</button></div></header>
+    <section class="metric-grid" id="metrics" aria-label="Delivery metrics"></section>
+    <section class="toolbar"><div class="filters"><label>Delivery state<select id="statusFilter"><option value="all">All attempts</option><option value="failed">Failed</option><option value="retrying">Retry scheduled</option><option value="delivered">Delivered</option><option value="dead-letter">Dead letter</option></select></label><label>Search<input id="searchInput" type="search" placeholder="Event ID, customer, endpoint…"></label></div><button id="resetDemo" class="button button-secondary">Reset demo</button></section>
+    <section class="content-grid">
+      <div class="panel delivery-panel"><div class="panel-heading"><div><h2>Delivery attempts</h2><p id="resultCount">Select a row to inspect evidence.</p></div><span class="tiny-label">LATEST FIRST</span></div><div class="table-wrap"><table><thead><tr><th>EVENT</th><th>DESTINATION</th><th>ATTEMPT</th><th>STATUS</th><th>AGE</th></tr></thead><tbody id="eventsBody"></tbody></table></div><div id="emptyState" class="empty-state hidden">No attempts match those filters.</div></div>
+      <aside class="panel detail-panel" id="detailPanel"><div class="panel-heading"><div><h2>Delivery evidence</h2><p>Select an attempt to investigate.</p></div></div><div class="detail-empty"><div class="empty-icon">⌁</div><strong>Start with a delivery</strong><p>Review the error, retry posture, duplicate risk and suggested next action.</p></div></aside>
+    </section>
+    <footer class="footer"><span>DAY 022 · DAILY AI BUILDS</span><span>HEURISTICS ONLY · VERIFY BEFORE PRODUCTION ACTION</span></footer>
+  </main>
+</div>
+<dialog id="runbookDialog"><form method="dialog"><div class="dialog-heading"><div><div class="eyebrow">FIELD GUIDE</div><h2>Webhook incident runbook</h2></div><button class="icon-button" aria-label="Close">×</button></div><div id="runbookContent" class="runbook-content"></div><div class="dialog-actions"><button class="button button-primary">Close</button></div></form></dialog>
+<script type="module" src="./src/app.js"></script>
+</body></html>

@@ -1,0 +1,5 @@
+import test from "node:test";import assert from "node:assert/strict";
+import {retryDelayMs,buildRetrySchedule,retryDecision} from "../src/core/retry-policy.js";
+test("retry delay is exponential and capped",()=>{assert.equal(retryDelayMs(1,{baseMs:100,maxMs:500}),100);assert.equal(retryDelayMs(2,{baseMs:100,maxMs:500}),200);assert.equal(retryDelayMs(5,{baseMs:100,maxMs:500}),500);assert.equal(retryDelayMs(6,{baseMs:100,maxMs:500}),null);});
+test("retry schedule is cumulative and deterministic",()=>{const schedule=buildRetrySchedule("2026-01-01T00:00:00.000Z",{baseMs:100,maxMs:500,maxAttempts:4});assert.deepEqual(schedule.map((item)=>item.delayMs),[100,200,400]);assert.equal(schedule[0].at,"2026-01-01T00:00:00.100Z");});
+test("permanent failures and dead letters are not retried",()=>{assert.equal(retryDecision({status:"failed",attempt:1,failureType:"auth"}).retry,false);assert.equal(retryDecision({status:"dead-letter",attempt:1,failureType:"timeout"}).retry,false);assert.equal(retryDecision({status:"failed",attempt:1,failureType:"timeout"}).retry,true);});

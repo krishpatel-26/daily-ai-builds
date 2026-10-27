@@ -1,0 +1,3 @@
+import test from "node:test";import assert from "node:assert/strict";import {classifyFailure} from "../src/core/triage.js";
+test("failure types map to actionable guidance",()=>{assert.equal(classifyFailure({status:"failed",failureType:"auth"}).severity,"high");assert.match(classifyFailure({status:"failed",failureType:"rate_limit"}).action,/Retry-After/);assert.equal(classifyFailure({status:"delivered",failureType:"none"}).severity,"low");});
+test("unknown failure remains reviewable",()=>{const result=classifyFailure({status:"failed",failureType:"mystery"});assert.equal(result.category,"Unclassified");assert.equal(result.shouldRetry,true);});

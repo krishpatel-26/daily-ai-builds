@@ -1,0 +1,3 @@
+import test from "node:test";import assert from "node:assert/strict";import {filterEvents} from "../src/core/filter-events.js";
+const events=[{id:"one",status:"failed",customer:"Zenith",createdAt:"2026-01-01T00:00:00Z"},{id:"two",status:"delivered",customer:"Acme",createdAt:"2026-01-03T00:00:00Z"},{id:"three",status:"failed",customer:"Acme",createdAt:"2026-01-02T00:00:00Z"}];
+test("status and case-insensitive search filters and sorts",()=>{assert.deepEqual(filterEvents(events,{status:"failed",query:"acme"}).map((item)=>item.id),["three"]);assert.deepEqual(filterEvents(events).map((item)=>item.id),["two","three","one"]);});

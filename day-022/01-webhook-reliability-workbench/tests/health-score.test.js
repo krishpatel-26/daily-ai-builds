@@ -1,0 +1,3 @@
+import test from "node:test";import assert from "node:assert/strict";import {summarizeHealth} from "../src/core/health-score.js";
+test("health summary counts records and bounds score",()=>{const summary=summarizeHealth([{id:"a",endpoint:"x",idempotencyKey:"k",status:"delivered"},{id:"b",endpoint:"x",idempotencyKey:"k",status:"dead-letter"}]);assert.equal(summary.total,2);assert.equal(summary.delivered,1);assert.equal(summary.deadLetter,1);assert.ok(summary.healthScore>=0&&summary.healthScore<=100);});
+test("empty dataset has zero metrics",()=>{const summary=summarizeHealth([]);assert.equal(summary.successRate,0);assert.equal(summary.healthScore,0);});

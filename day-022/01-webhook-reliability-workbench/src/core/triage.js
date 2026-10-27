@@ -11,6 +11,7 @@ const playbooks = {
 };
 export function classifyFailure(event) {
   const key = String(event?.failureType ?? (event?.status === "delivered" ? "none" : "unknown")).toLowerCase();
-  const base = playbooks[key] ?? playbooks.unknown;
-  return { ...base, failureType: key, shouldRetry: ["timeout", "rate_limit", "server_error", "unknown"].includes(key) && event?.status !== "delivered" };
+  const normalizedKey = Object.hasOwn(playbooks, key) ? key : "unknown";
+  const base = playbooks[normalizedKey];
+  return { ...base, failureType: key, shouldRetry: ["timeout", "rate_limit", "server_error", "unknown"].includes(normalizedKey) && event?.status !== "delivered" };
 }

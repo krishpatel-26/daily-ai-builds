@@ -1,0 +1,3 @@
+import test from "node:test";import assert from "node:assert/strict";import {countBy,failureBreakdown,attemptStats} from "../src/core/metrics.js";
+test("countBy and failure breakdown are deterministic",()=>{assert.deepEqual({...countBy([{s:"a"},{s:"a"},{s:"b"}],(x)=>x.s)},{a:2,b:1});assert.deepEqual({...failureBreakdown([{status:"failed",failureType:"timeout"},{status:"delivered",failureType:"none"}])},{timeout:1});});
+test("attempt stats include min max and mean",()=>{assert.deepEqual(attemptStats([{attempt:1},{attempt:2},{attempt:6}]),{min:1,max:6,average:3});assert.deepEqual(attemptStats([]),{min:0,max:0,average:0});});

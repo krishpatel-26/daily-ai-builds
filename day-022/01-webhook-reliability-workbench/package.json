@@ -1,0 +1,9 @@
+{
+  "name": "webhook-reliability-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first webhook delivery triage and incident handoff prototype",
+  "scripts": { "test": "node --test", "serve": "python3 -m http.server 4173" },
+  "engines": { "node": ">=18" }
+}

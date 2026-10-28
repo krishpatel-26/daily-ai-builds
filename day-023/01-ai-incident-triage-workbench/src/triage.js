@@ -1,0 +1,26 @@
+const RULES = [
+ {id:"resource-pressure",re:/out of memory|heap limit|disk full|no space left|cpu saturation/i,title:"Resource exhaustion signal",severity:"critical",action:"Check resource saturation and recent workload changes; follow the service recovery runbook."},
+ {id:"auth-failure",re:/\b(401|403|unauthori[sz]ed|forbidden|invalid token|authentication failed)\b/i,title:"Authentication / authorization failure",severity:"high",action:"Verify credentials, token expiry, scopes, and service identity configuration."},
+ {id:"dependency-timeout",re:/timeout|timed out|deadline exceeded|ETIMEDOUT|ECONNRESET/i,title:"Dependency timeout or connection reset",severity:"high",action:"Check dependency latency, network health, connection pools, and configured timeouts before retrying."},
+ {id:"server-error",re:/\b(500|502|503|504|internal server error|bad gateway|service unavailable)\b/i,title:"Server-side or upstream failure",severity:"high",action:"Correlate upstream health and deploy events; confirm recovery before replaying requests."},
+ {id:"rate-limit",re:/\b(429|rate.?limit|too many requests|quota exceeded)\b/i,title:"Rate limit or quota pressure",severity:"medium",action:"Inspect quotas and request bursts; use bounded backoff and respect Retry-After."},
+ {id:"data-integrity",re:/duplicate key|constraint violation|null pointer|schema mismatch|invalid payload/i,title:"Data integrity or payload validation issue",severity:"medium",action:"Validate payload and schema contracts; do not retry unchanged invalid input."}
+];
+const rank={critical:4,high:3,medium:2,low:1};
+export function parseLogInput(input){
+ if(typeof input!=="string"||!input.trim())throw Error("Input is empty. Paste a JSON array or JSON Lines.");
+ let rows;
+ try{const p=JSON.parse(input);rows=Array.isArray(p)?p:[p]}catch{rows=input.split(/\r?\n/).filter(x=>x.trim()).map((line,i)=>{try{return JSON.parse(line)}catch{throw Error(`Line ${i+1} is not valid JSON`)}})}
+ if(!rows.length)throw Error("No log records found.");
+ if(rows.length>10000)throw Error("Input exceeds the 10,000-record safety limit.");
+ return rows.map((r,i)=>{if(!r||typeof r!=="object"||Array.isArray(r))throw Error(`Record ${i+1} must be an object`);const message=String(r.message??r.msg??r.error??r.event??"").trim();if(!message)throw Error(`Record ${i+1} has no message field`);return{id:String(r.id??r.event_id??`row-${i+1}`),timestamp:String(r.timestamp??r.time??r["@timestamp"]??""),level:String(r.level??r.severity??"info").toLowerCase(),service:String(r.service??r.app??r.application??"unknown-service"),message,requestId:String(r.requestId??r.request_id??r.trace_id??r.correlationId??""),line:i+1}})
+}
+export function analyzeLogs(records){
+ if(!Array.isArray(records)||!records.length)throw Error("Provide at least one log record.");
+ const events=records.map(r=>{const rule=RULES.find(x=>x.re.test(r.message+" "+r.level));const sev=rule?.severity??(r.level==="fatal"||r.level==="error"?"high":r.level==="warn"||r.level==="warning"?"medium":"low");return{...r,severity:sev,category:rule?.id??"unclassified",title:rule?.title??"Unclassified event",recommendation:rule?.action??"Review adjacent logs and correlate with the owning service before drawing conclusions."}});
+ const groups=new Map();for(const e of events){const k=[e.service,e.category,e.title].join("|");if(!groups.has(k))groups.set(k,{service:e.service,category:e.category,title:e.title,severity:e.severity,recommendation:e.recommendation,count:0,evidence:[],requestIds:new Set(),times:[]});const g=groups.get(k);g.count++;if(g.evidence.length<5)g.evidence.push({line:e.line,timestamp:e.timestamp||null,level:e.level,message:e.message,requestId:e.requestId||null});if(e.requestId)g.requestIds.add(e.requestId);if(e.timestamp)g.times.push(e.timestamp);if(rank[e.severity]>rank[g.severity])g.severity=e.severity}
+ const findings=[...groups.values()].map(g=>({...g,requestIds:[...g.requestIds],firstSeen:g.times.sort()[0]??null,lastSeen:g.times.at(-1)??null})).sort((a,b)=>rank[b.severity]-rank[a.severity]||b.count-a.count);
+ const counts={critical:0,high:0,medium:0,low:0};for(const e of events)counts[e.severity]++;
+ return{generatedAt:new Date().toISOString(),recordCount:events.length,serviceCount:new Set(events.map(e=>e.service)).size,requestIdCoverage:events.filter(e=>e.requestId).length,counts,findings}
+}
+export function toMarkdownReport(r){return `# Incident Triage Report\n\nGenerated: ${r.generatedAt}\n\n- Records: ${r.recordCount}\n- Services: ${r.serviceCount}\n- Request ID coverage: ${r.requestIdCoverage}/${r.recordCount}\n- Severity counts: ${JSON.stringify(r.counts)}\n\n## Findings\n\n${r.findings.map((f,i)=>`### ${i+1}. [${f.severity.toUpperCase()}] ${f.title}\n\nService: ${f.service} · Occurrences: ${f.count}\n\nRecommendation: ${f.recommendation}\n\nEvidence:\n${f.evidence.map(e=>`- Line ${e.line} · ${e.timestamp??"no timestamp"} · ${e.requestId??"no request ID"} — ${e.message}`).join("\n")}\n`).join("\n")}\n## Human review checklist\n\n- [ ] Confirm incident window and source logs.\n- [ ] Correlate request IDs with approved observability tools.\n- [ ] Validate each hypothesis with the service owner.\n- [ ] Record remediation and recovery evidence.\n\n> Findings are heuristic leads, not confirmed root causes.\n`}

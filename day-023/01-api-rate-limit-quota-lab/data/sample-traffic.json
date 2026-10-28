@@ -1,0 +1,12 @@
+{
+  "description": "Synthetic examples to reason about rate-limit boundaries; no live customer data.",
+  "units": { "atMs": "milliseconds from replay start", "cost": "quota units consumed per request" },
+  "requests": [
+    {"id":"demo-001","atMs":0,"clientId":"acme-demo","route":"/v1/orders","label":"Initial request","cost":1},
+    {"id":"demo-002","atMs":100,"clientId":"acme-demo","route":"/v1/orders","label":"Burst request","cost":1},
+    {"id":"demo-003","atMs":200,"clientId":"acme-demo","route":"/v1/orders","label":"Burst request","cost":1},
+    {"id":"demo-004","atMs":9500,"clientId":"acme-demo","route":"/v1/orders","label":"Near window boundary","cost":1},
+    {"id":"demo-005","atMs":10010,"clientId":"acme-demo","route":"/v1/orders","label":"Just after boundary","cost":1},
+    {"id":"demo-006","atMs":10200,"clientId":"other-demo","route":"/v1/orders","label":"Separate client","cost":1}
+  ]
+}

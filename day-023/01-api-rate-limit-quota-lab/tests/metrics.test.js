@@ -1,0 +1,3 @@
+import test from "node:test";import assert from "node:assert/strict";import {summarizeResults,compareAlgorithms,percent} from "../src/core/metrics.js";
+test("summary counts allow, deny and retry wait",()=>{const s=summarizeResults([{allowed:true,retryAfterMs:0},{allowed:false,retryAfterMs:500},{allowed:false,retryAfterMs:200}]);assert.equal(s.total,3);assert.equal(s.allowed,1);assert.equal(s.limited,2);assert.equal(s.totalRetryAfterMs,700);assert.equal(s.maxRetryAfterMs,500);});
+test("comparison and percentage handle empty input",()=>{assert.equal(compareAlgorithms({fixedWindow:[{allowed:true}]}).fixedWindow.allowed,1);assert.equal(percent(0,0),"0%");assert.equal(percent(1,4),"25%");});

@@ -1,0 +1,11 @@
+import test from "node:test";import assert from "node:assert/strict";import{parseLogInput,analyzeLogs,toMarkdownReport}from"../src/triage.js";
+test("normalizes aliases",()=>{const r=parseLogInput('[{"time":"2026-01-01","severity":"error","app":"api","msg":"boom","trace_id":"t1"}]');assert.equal(r[0].service,"api");assert.equal(r[0].requestId,"t1")});
+test("parses JSONL",()=>assert.equal(parseLogInput('{"message":"one"}\n{"message":"two"}').length,2));
+test("rejects empty and malformed input",()=>{assert.throws(()=>parseLogInput(" "),/empty/);assert.throws(()=>parseLogInput("{bad}"),/not valid JSON/)});
+test("requires message",()=>assert.throws(()=>parseLogInput('[{"level":"error"}]'),/no message/));
+test("caps record count",()=>assert.throws(()=>parseLogInput(JSON.stringify(Array.from({length:10001},(_,i)=>({message:String(i)}))),/10,000/));
+test("groups repeated timeouts and bounds evidence",()=>{const r=analyzeLogs(parseLogInput(JSON.stringify(Array.from({length:7},(_,i)=>({service:"pay",level:"error",message:"upstream timeout",request_id:"r"+i})))));assert.equal(r.findings[0].count,7);assert.equal(r.findings[0].evidence.length,5);assert.equal(r.findings[0].requestIds.length,7)});
+test("critical resource findings rank first",()=>{const r=analyzeLogs(parseLogInput('[{"message":"401 Unauthorized"},{"message":"out of memory heap limit"},{"message":"429 rate limit"}]'));assert.equal(r.findings[0].severity,"critical")});
+test("counts services and request ID coverage",()=>{const r=analyzeLogs(parseLogInput('[{"service":"a","message":"ok","request_id":"x"},{"service":"b","message":"ok"}]'));assert.equal(r.serviceCount,2);assert.equal(r.requestIdCoverage,1)});
+test("markdown includes evidence and review checklist",()=>{const r=analyzeLogs(parseLogInput('[{"message":"503 Service Unavailable","request_id":"r-1"}]'));assert.match(toMarkdownReport(r),/Human review checklist/);assert.match(toMarkdownReport(r),/r-1/)});
+test("unknown events stay visible",()=>assert.equal(analyzeLogs(parseLogInput('[{"message":"job completed"}]')).findings[0].category,"unclassified"));

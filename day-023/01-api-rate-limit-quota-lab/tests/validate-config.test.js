@@ -1,0 +1,4 @@
+import test from "node:test";import assert from "node:assert/strict";import {validatePolicy} from "../src/core/validate-config.js";import {simulateTraffic} from "../src/core/simulate.js";
+test("policy accepts valid request and window bounds",()=>{assert.deepEqual(validatePolicy({limit:5,windowMs:10000}),[]);});
+test("policy rejects missing, decimal, zero and huge values",()=>{assert.ok(validatePolicy(null).length);assert.ok(validatePolicy({limit:0,windowMs:1000}).length);assert.ok(validatePolicy({limit:5.2,windowMs:1000}).length);assert.ok(validatePolicy({limit:1001,windowMs:3600001}).length);});
+test("simulation refuses invalid policies and algorithms",()=>{assert.throws(()=>simulateTraffic([],{limit:0,windowMs:0}),/Invalid policy/);assert.throws(()=>simulateTraffic([],{limit:1,windowMs:1000},"unknown"),/Unsupported algorithm/);});

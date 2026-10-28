@@ -1,0 +1,4 @@
+{"timestamp":"2026-10-28T08:41:02Z","level":"error","service":"billing-api","request_id":"req-7f2","message":"POST /charge failed: upstream timeout after 3000ms"}
+{"timestamp":"2026-10-28T08:41:03Z","level":"error","service":"billing-api","request_id":"req-7f3","message":"POST /charge failed: upstream timeout after 3000ms"}
+{"timestamp":"2026-10-28T08:41:06Z","level":"warn","service":"identity-service","request_id":"req-7f4","message":"401 Unauthorized: token expired"}
+{"timestamp":"2026-10-28T08:41:10Z","level":"error","service":"orders-api","request_id":"req-7f6","message":"503 Service Unavailable from inventory provider"}

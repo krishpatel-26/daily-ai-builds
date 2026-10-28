@@ -1,0 +1,14 @@
+{
+  "name": "ai-incident-triage-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "check": "node --check src/server.js && node --check src/triage.js && node --check tests/triage.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

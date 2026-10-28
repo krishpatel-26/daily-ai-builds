@@ -49,3 +49,13 @@ A local-first evaluation workbench for regression cases, pass/fail/review outcom
 - [LinkedIn post draft](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-014/01-agent-reliability-workbench/docs/POST_COPY.md)
 
 Important: the UI's run history and timings are synthetic demo data. The Python CLI runs deterministic checks against fixed output samples; no live model provider is invoked. Browser QA and Python tests still need to be run before presenting test status as verified.
+
+
+## Day 023 — API Rate Limit & Quota Lab
+A local-first dashboard to replay synthetic API traffic against fixed-window, sliding-window and token-bucket algorithms, inspect HTTP 429 and Retry-After behavior, and export quota incident evidence.
+
+- [Open the project](https://github.com/krishpatel-26/daily-ai-builds/tree/main/day-023/01-api-rate-limit-quota-lab)
+- [Read the project README](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-023/01-api-rate-limit-quota-lab/README.md)
+- [View the Day 023 commits](https://github.com/krishpatel-26/daily-ai-builds/commits/main/day-023/01-api-rate-limit-quota-lab)
+
+The replay uses synthetic requests only. Verification for this build includes JavaScript syntax checks and isolated execution of the committed test cases; the full native npm test command and browser QA have not been run in this environment.

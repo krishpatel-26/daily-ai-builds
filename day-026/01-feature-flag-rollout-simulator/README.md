@@ -45,3 +45,6 @@ The simulator models a simple sequence: configured → evaluating → promoted t
 
 ## Cohort assignment
 User assignment uses a deterministic string hash and maps the result into 100 buckets. A user therefore stays in the same bucket when the exposure percentage increases, which is the core property needed for sticky cohorts. This is a teaching implementation, not a cryptographic hash or a substitute for a mature experimentation platform. Avoid putting personal data into identifiers; use opaque stable IDs in real systems.
+
+## Guardrail semantics
+A stage passes only when both observed error rate and p95 latency are at or below their configured limits. A value equal to its limit passes; a value above the limit fails. The simulator uses a simple AND policy. Production systems may need additional signals such as saturation, availability, business conversion, queue depth, or dependency health, with clear ownership for each signal.

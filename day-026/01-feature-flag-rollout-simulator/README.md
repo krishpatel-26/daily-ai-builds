@@ -48,3 +48,6 @@ User assignment uses a deterministic string hash and maps the result into 100 bu
 
 ## Guardrail semantics
 A stage passes only when both observed error rate and p95 latency are at or below their configured limits. A value equal to its limit passes; a value above the limit fails. The simulator uses a simple AND policy. Production systems may need additional signals such as saturation, availability, business conversion, queue depth, or dependency health, with clear ownership for each signal.
+
+## Choosing thresholds
+Set thresholds from a known baseline and service-level objectives rather than choosing convenient round numbers. Compare the candidate against a stable control cohort where possible. Account for sample size, traffic seasonality, and measurement delay. A short rollout window with too few requests can produce misleading confidence; do not promote solely because the simulator reports a pass.

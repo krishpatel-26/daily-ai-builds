@@ -92,3 +92,6 @@ The `POST /api/simulate` endpoint accepts a JSON object with `steps` (ascending 
 
 ## Local security notes
 The server binds to `127.0.0.1`, does not require credentials, and is intended for a developer workstation. Do not expose it to a public network or deploy it as-is. A production control plane would require authentication, authorization, CSRF protection where applicable, input validation, rate limiting, audit trails, secret management, and change approval policies.
+
+## Production telemetry integration (design note)
+A real rollout controller should consume time-windowed metrics from an observability backend rather than static form values. Each measurement should carry a service, environment, release identifier, cohort, time window, sample count, and source timestamp. The decision engine should reject stale or incomplete telemetry and make its evaluation window visible to operators. None of these integrations are implemented in this demo.

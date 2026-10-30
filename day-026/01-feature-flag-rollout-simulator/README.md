@@ -98,3 +98,6 @@ A real rollout controller should consume time-windowed metrics from an observabi
 
 ## Recommended audit event fields
 For a production implementation, record a unique event ID, flag key, environment, previous and new exposure, actor identity, decision reason, evaluated metrics, threshold values, timestamp, and correlation/release ID. Keep audit records append-only and restrict access. The simulator does not persist audit events; this section describes a production hardening requirement.
+
+## Feature flag lifecycle
+Treat flags as temporary operational controls unless they are explicitly designed as permanent configuration. Create flags with an owner, purpose, creation date, review date, and removal condition. After full rollout, remove obsolete branching code and retire the flag. Periodically review stale flags because long-lived flags increase test combinations and operational complexity.

@@ -107,3 +107,6 @@ Stable bucketing supports consistent assignment, but it does not prove that coho
 
 ## Rollback versus recovery
 Disabling a feature flag can stop new exposure, but it does not necessarily reverse database migrations, undo external side effects, or restore corrupted data. Design backward-compatible changes, reversible migrations where practical, and compensating actions for irreversible workflows. Validate recovery separately from the flag toggle. The simulator models exposure returning to zero, not full system recovery.
+
+## Production hardening roadmap
+Before adapting this concept into a real service, add a persistent flag store, authenticated role-based controls, approval workflows, real metrics adapters, stale-data detection, durable audit logging, alert routing, concurrency protection, and integration tests against a staging environment. Define failure behavior for the control plane itself; an unavailable rollout controller should not silently promote a release.

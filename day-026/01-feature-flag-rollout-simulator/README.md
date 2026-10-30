@@ -86,3 +86,6 @@ The dashboard's kill switch is a local demonstration only; it does not change an
 | Latency breach | p95 above limit | Stop and roll back |
 | Invalid schedule | Descending percentages | Reject configuration |
 | Missing governance | Owner/purpose/review date absent | Flag marked for review |
+
+## Simulation input contract
+The `POST /api/simulate` endpoint accepts a JSON object with `steps` (ascending percentages), `errorRate`, `latencyP95`, `maxErrorRate`, and `maxLatencyP95`. The dashboard sends numeric values. Invalid JSON returns a client error; invalid rollout configuration is surfaced as an error response. The service is bound to loopback for local use and is not designed as a public API.

@@ -51,3 +51,13 @@ A stage passes only when both observed error rate and p95 latency are at or belo
 
 ## Choosing thresholds
 Set thresholds from a known baseline and service-level objectives rather than choosing convenient round numbers. Compare the candidate against a stable control cohort where possible. Account for sample size, traffic seasonality, and measurement delay. A short rollout window with too few requests can produce misleading confidence; do not promote solely because the simulator reports a pass.
+
+## Operator playbook
+1. Confirm the affected flag and current exposure.
+2. Compare candidate metrics with the control and baseline.
+3. If a release guardrail is breached, stop exposure growth.
+4. Disable the flag or route traffic to the known-good path using the production platform's approved controls.
+5. Record the decision, timestamp, owner, and evidence.
+6. Verify recovery before attempting another rollout.
+
+The dashboard's kill switch is a local demonstration only; it does not change an external flag.

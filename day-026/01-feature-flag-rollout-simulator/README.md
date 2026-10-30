@@ -64,3 +64,13 @@ The dashboard's kill switch is a local demonstration only; it does not change an
 
 ## Incident rehearsal scenarios
 **Error spike:** set error rate above its threshold and verify that the first rollout stage stops. **Latency regression:** set p95 latency above its limit and confirm the same rollback decision. **Healthy candidate:** keep both metrics below their limits and verify that all selected stages are evaluated. **Manual stop:** use the kill-switch control and confirm the displayed exposure returns to zero. Repeat rehearsals after changing thresholds.
+
+## Release readiness checklist
+- [ ] A named owner is accountable for the flag.
+- [ ] The flag has a concise purpose and removal plan.
+- [ ] The control and candidate cohorts are understood.
+- [ ] Error and latency guardrails are defined before rollout.
+- [ ] A tested fallback path exists.
+- [ ] Monitoring covers dependencies as well as the changed service.
+- [ ] Someone is available to respond during the rollout window.
+- [ ] The flag has a review or retirement date.

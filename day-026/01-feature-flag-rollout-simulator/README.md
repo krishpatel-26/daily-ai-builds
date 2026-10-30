@@ -113,3 +113,6 @@ Before adapting this concept into a real service, add a persistent flag store, a
 
 ## Operator usability
 Release controls should make state, risk, and next action clear without relying on color alone. Pair status colors with text labels, preserve keyboard access, announce state changes to assistive technology, and show units beside every metric. In a production interface, require confirmation for high-impact actions and display the target environment prominently before applying them.
+
+## Troubleshooting
+**Dashboard cannot reach the API:** confirm `npm start` is running and open the loopback URL shown above. **Invalid JSON response:** check the request body and numeric fields. **Unexpected rollback:** compare the supplied metric values with the configured thresholds; either metric can stop the run. **No later stages appear:** the simulator intentionally halts at the first failed stage. **Port already in use:** stop the process using port 4176 before restarting.

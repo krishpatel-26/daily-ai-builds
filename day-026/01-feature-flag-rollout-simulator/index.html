@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReleasePilot — Feature Flag Rollout Simulator</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="top"><div class="brand"><span class="mark">R</span><span>RELEASE<span class="muted">PILOT</span></span></div><span class="tag">DAY 026 · DAILY AI BUILDS</span><span class="live"><i></i> LOCAL SIMULATION</span></header>
+<main>
+<section class="hero"><div><p class="eyebrow">PROGRESSIVE DELIVERY WORKBENCH</p><h1>Ship gradually.<br><em>Recover instantly.</em></h1><p class="sub">Model a feature rollout, watch guardrails, and rehearse the kill switch before production gets involved.</p></div><div class="hero-card"><span class="eyebrow">RELEASE PRINCIPLE</span><strong>DEPLOY ≠ RELEASE</strong><p>Control exposure independently from deployment.</p><div class="steps"><span>01 · DEPLOY</span><b>→</b><span>02 · RAMP</span><b>→</b><span>03 · OBSERVE</span><b>→</b><span>04 · PROMOTE</span></div></div></section>
+<section class="grid">
+<article class="panel config"><div class="panel-head"><div><p class="eyebrow">01 / CONFIGURATION</p><h2>Rollout controls</h2></div><span class="pill">SIMULATOR</span></div>
+<label>Feature flag name<input id="flagName" value="new-checkout-flow"></label>
+<div class="two"><label>Candidate error rate (%)<input id="errorRate" type="number" min="0" step=".1" value="0.8"></label><label>p95 latency (ms)<input id="latency" type="number" min="0" step="10" value="280"></label></div>
+<div class="two"><label>Error threshold (%)<input id="maxError" type="number" min="0" step=".1" value="2"></label><label>Latency threshold (ms)<input id="maxLatency" type="number" min="0" step="10" value="500"></label></div>
+<label>Rollout schedule</label><div class="ramp" id="ramp"><button data-pct="1">1%</button><button data-pct="5">5%</button><button data-pct="25">25%</button><button data-pct="50">50%</button><button data-pct="100">100%</button></div>
+<div class="actions"><button class="primary" id="simulate">Run rollout simulation ↗</button><button class="danger" id="kill">Trigger kill switch</button></div><p class="hint">Synthetic metrics only. No production traffic is contacted.</p></article>
+<article class="panel results"><div class="panel-head"><div><p class="eyebrow">02 / LIVE DECISION</p><h2>Release health</h2></div><span id="status" class="status idle">AWAITING RUN</span></div>
+<div class="metrics"><div><small>EXPOSURE</small><strong id="exposure">0%</strong></div><div><small>ERROR RATE</small><strong id="metricError">—</strong></div><div><small>P95 LATENCY</small><strong id="metricLatency">—</strong></div></div>
+<div class="bar"><span id="barFill"></span></div><div id="stageList" class="stage-list"><div class="empty">Run a simulation to inspect each rollout stage.</div></div>
+<div id="decision" class="decision">Define guardrails, then run the simulation.</div></article>
+</section>
+<section class="grid lower">
+<article class="panel"><p class="eyebrow">03 / EXPOSURE MODEL</p><h2>Sticky user assignment</h2><p class="muted-text">A deterministic hash keeps the same user in the same cohort as traffic percentages change.</p><div class="cohorts"><span>CONTROL <b>90%</b></span><span>CANDIDATE <b id="cohortPct">10%</b></span></div><div class="cohortbar"><i id="cohortBar"></i></div><p class="hint">Illustrative allocation model; not a real feature-flag SDK.</p></article>
+<article class="panel"><p class="eyebrow">04 / RELEASE GOVERNANCE</p><h2>Before you promote</h2><ul class="checks"><li><span>✓</span> Define error and latency thresholds</li><li><span>✓</span> Assign a rollout owner</li><li><span>✓</span> Verify the fallback path</li><li><span>✓</span> Test the kill switch</li><li><span>✓</span> Set a flag retirement date</li></ul></article>
+</section>
+<footer>RELEASEPILOT <span>Built for Day 026 · Daily AI Builds</span></footer>
+</main><script type="module" src="/app.js"></script>
+</body></html>

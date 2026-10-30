@@ -116,3 +116,6 @@ Release controls should make state, risk, and next action clear without relying 
 
 ## Troubleshooting
 **Dashboard cannot reach the API:** confirm `npm start` is running and open the loopback URL shown above. **Invalid JSON response:** check the request body and numeric fields. **Unexpected rollback:** compare the supplied metric values with the configured thresholds; either metric can stop the run. **No later stages appear:** the simulator intentionally halts at the first failed stage. **Port already in use:** stop the process using port 4176 before restarting.
+
+## Scope and non-goals
+ReleasePilot is a learning project for reasoning about progressive delivery. It demonstrates staged exposure, deterministic assignment, threshold evaluation, and a local rollback decision. It is not a feature-flag SDK, experimentation platform, observability product, deployment system, or production incident-management tool. Keep this boundary explicit when sharing screenshots or demos.

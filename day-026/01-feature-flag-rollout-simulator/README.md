@@ -74,3 +74,15 @@ The dashboard's kill switch is a local demonstration only; it does not change an
 - [ ] Monitoring covers dependencies as well as the changed service.
 - [ ] Someone is available to respond during the rollout window.
 - [ ] The flag has a review or retirement date.
+
+## Verification matrix
+| Scenario | Input condition | Expected result |
+|---|---|---|
+| Disabled flag | enabled = false | No user is exposed |
+| Zero exposure | percentage = 0 | No user is exposed |
+| Full exposure | percentage = 100 | Every bucket is included |
+| Healthy metrics | Both metrics within limits | Continue through configured stages |
+| Error breach | Error rate above limit | Stop and roll back |
+| Latency breach | p95 above limit | Stop and roll back |
+| Invalid schedule | Descending percentages | Reject configuration |
+| Missing governance | Owner/purpose/review date absent | Flag marked for review |

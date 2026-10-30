@@ -39,3 +39,6 @@ This is an educational simulator using synthetic metrics. It does not connect to
 Deployment and release are separate decisions. Increase exposure only when evidence supports it, and define rollback criteria before the rollout begins.
 
 Further reading: [Vercel — Feature flags](https://vercel.com/i/feature-flagging) · [GO Feature Flag — Rollouts](https://gofeatureflag.org/product/rollouts)
+
+## Rollout state model
+The simulator models a simple sequence: configured → evaluating → promoted to the next exposure step, or rolled back when a guardrail is breached. The first failed step terminates the run; later percentages are not evaluated. This makes the decision trace easy to inspect and avoids treating a failed stage as permission to continue. The model is intentionally synchronous and deterministic so the same inputs produce the same decision.

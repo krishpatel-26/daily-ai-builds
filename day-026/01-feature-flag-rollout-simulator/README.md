@@ -104,3 +104,6 @@ Treat flags as temporary operational controls unless they are explicitly designe
 
 ## Cohort analysis caveats
 Stable bucketing supports consistent assignment, but it does not prove that cohorts are statistically comparable. Real experiments need sufficient sample size, exposure logging, exclusion rules, and analysis that accounts for repeated users and multiple metrics. Avoid interpreting a small synthetic sample as evidence of product impact. The sample users shown in the interface are illustrative only.
+
+## Rollback versus recovery
+Disabling a feature flag can stop new exposure, but it does not necessarily reverse database migrations, undo external side effects, or restore corrupted data. Design backward-compatible changes, reversible migrations where practical, and compensating actions for irreversible workflows. Validate recovery separately from the flag toggle. The simulator models exposure returning to zero, not full system recovery.

@@ -89,3 +89,6 @@ The dashboard's kill switch is a local demonstration only; it does not change an
 
 ## Simulation input contract
 The `POST /api/simulate` endpoint accepts a JSON object with `steps` (ascending percentages), `errorRate`, `latencyP95`, `maxErrorRate`, and `maxLatencyP95`. The dashboard sends numeric values. Invalid JSON returns a client error; invalid rollout configuration is surfaced as an error response. The service is bound to loopback for local use and is not designed as a public API.
+
+## Local security notes
+The server binds to `127.0.0.1`, does not require credentials, and is intended for a developer workstation. Do not expose it to a public network or deploy it as-is. A production control plane would require authentication, authorization, CSRF protection where applicable, input validation, rate limiting, audit trails, secret management, and change approval policies.

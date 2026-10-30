@@ -101,3 +101,6 @@ For a production implementation, record a unique event ID, flag key, environment
 
 ## Feature flag lifecycle
 Treat flags as temporary operational controls unless they are explicitly designed as permanent configuration. Create flags with an owner, purpose, creation date, review date, and removal condition. After full rollout, remove obsolete branching code and retire the flag. Periodically review stale flags because long-lived flags increase test combinations and operational complexity.
+
+## Cohort analysis caveats
+Stable bucketing supports consistent assignment, but it does not prove that cohorts are statistically comparable. Real experiments need sufficient sample size, exposure logging, exclusion rules, and analysis that accounts for repeated users and multiple metrics. Avoid interpreting a small synthetic sample as evidence of product impact. The sample users shown in the interface are illustrative only.

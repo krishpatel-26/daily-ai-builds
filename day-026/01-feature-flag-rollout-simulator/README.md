@@ -119,3 +119,6 @@ Release controls should make state, risk, and next action clear without relying 
 
 ## Scope and non-goals
 ReleasePilot is a learning project for reasoning about progressive delivery. It demonstrates staged exposure, deterministic assignment, threshold evaluation, and a local rollback decision. It is not a feature-flag SDK, experimentation platform, observability product, deployment system, or production incident-management tool. Keep this boundary explicit when sharing screenshots or demos.
+
+## Contribution guidelines
+Keep rollout decisions deterministic and dependency-light. Add tests for boundary values and failure paths whenever decision rules change. Update the verification matrix and input contract when behavior changes. Prefer small, reviewable changes with descriptive commit messages, and avoid claiming production integrations unless they are implemented and tested.

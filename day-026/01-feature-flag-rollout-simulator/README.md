@@ -95,3 +95,6 @@ The server binds to `127.0.0.1`, does not require credentials, and is intended f
 
 ## Production telemetry integration (design note)
 A real rollout controller should consume time-windowed metrics from an observability backend rather than static form values. Each measurement should carry a service, environment, release identifier, cohort, time window, sample count, and source timestamp. The decision engine should reject stale or incomplete telemetry and make its evaluation window visible to operators. None of these integrations are implemented in this demo.
+
+## Recommended audit event fields
+For a production implementation, record a unique event ID, flag key, environment, previous and new exposure, actor identity, decision reason, evaluated metrics, threshold values, timestamp, and correlation/release ID. Keep audit records append-only and restrict access. The simulator does not persist audit events; this section describes a production hardening requirement.

@@ -110,3 +110,6 @@ Disabling a feature flag can stop new exposure, but it does not necessarily reve
 
 ## Production hardening roadmap
 Before adapting this concept into a real service, add a persistent flag store, authenticated role-based controls, approval workflows, real metrics adapters, stale-data detection, durable audit logging, alert routing, concurrency protection, and integration tests against a staging environment. Define failure behavior for the control plane itself; an unavailable rollout controller should not silently promote a release.
+
+## Operator usability
+Release controls should make state, risk, and next action clear without relying on color alone. Pair status colors with text labels, preserve keyboard access, announce state changes to assistive technology, and show units beside every metric. In a production interface, require confirmation for high-impact actions and display the target environment prominently before applying them.

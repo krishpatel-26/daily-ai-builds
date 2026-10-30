@@ -42,3 +42,6 @@ Further reading: [Vercel — Feature flags](https://vercel.com/i/feature-flaggin
 
 ## Rollout state model
 The simulator models a simple sequence: configured → evaluating → promoted to the next exposure step, or rolled back when a guardrail is breached. The first failed step terminates the run; later percentages are not evaluated. This makes the decision trace easy to inspect and avoids treating a failed stage as permission to continue. The model is intentionally synchronous and deterministic so the same inputs produce the same decision.
+
+## Cohort assignment
+User assignment uses a deterministic string hash and maps the result into 100 buckets. A user therefore stays in the same bucket when the exposure percentage increases, which is the core property needed for sticky cohorts. This is a teaching implementation, not a cryptographic hash or a substitute for a mature experimentation platform. Avoid putting personal data into identifiers; use opaque stable IDs in real systems.

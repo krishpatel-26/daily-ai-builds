@@ -1,0 +1,1 @@
+{"name":"slo-sentinel","version":"1.0.0","private":true,"type":"module","scripts":{"start":"node src/server.js","test":"node --test","check":"node --check src/slo.js && node --check src/server.js"},"engines":{"node":">=20"}}

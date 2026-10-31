@@ -1,0 +1,11 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {calculateSlo,classifyBurnRate} from "../src/slo.js";
+const base={targetAvailability:99.9,totalRequests:100000,failedRequests:50,windowDays:30};
+test("healthy service retains most error budget",()=>{const r=calculateSlo(base);assert.equal(r.status,"HEALTHY");assert.ok(r.remainingPct>0);});
+test("high burn is flagged",()=>{const r=calculateSlo({...base,failedRequests:500});assert.equal(r.status,"HIGH_BURN");});
+test("budget exhaustion is explicit",()=>{const r=calculateSlo({...base,failedRequests:200});assert.equal(r.status,"BUDGET_EXHAUSTED");});
+test("observed availability is calculated",()=>{const r=calculateSlo(base);assert.equal(r.observedAvailability,99.95);});
+test("rejects failed requests above total",()=>{assert.throws(()=>calculateSlo({...base,failedRequests:100001}),RangeError);});
+test("rejects target outside valid range",()=>{assert.throws(()=>calculateSlo({...base,targetAvailability:100}),RangeError);});
+test("burn classification has severity bands",()=>{assert.equal(classifyBurnRate(15),"CRITICAL");assert.equal(classifyBurnRate(1.1),"ABOVE PACE");});

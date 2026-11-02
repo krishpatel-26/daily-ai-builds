@@ -1,0 +1,13 @@
+{
+  "monthlyBudget": 100,
+  "events": [
+    {"id":"evt-001","timestamp":"2026-11-01T08:15:00Z","project":"support-agent","provider":"openai","model":"gpt-4.1-mini","inputTokens":42000,"outputTokens":8500},
+    {"id":"evt-002","timestamp":"2026-11-01T10:20:00Z","project":"support-agent","provider":"openai","model":"gpt-4.1","inputTokens":18000,"outputTokens":4200},
+    {"id":"evt-003","timestamp":"2026-11-01T13:40:00Z","project":"research-copilot","provider":"anthropic","model":"claude-3-5-sonnet","inputTokens":65000,"outputTokens":12000},
+    {"id":"evt-004","timestamp":"2026-11-02T07:30:00Z","project":"support-agent","provider":"openai","model":"gpt-4.1-mini","inputTokens":52000,"outputTokens":11000},
+    {"id":"evt-005","timestamp":"2026-11-02T09:10:00Z","project":"document-parser","provider":"google","model":"gemini-2.5-flash","inputTokens":120000,"outputTokens":24000},
+    {"id":"evt-006","timestamp":"2026-11-02T11:45:00Z","project":"research-copilot","provider":"anthropic","model":"claude-3-5-sonnet","inputTokens":88000,"outputTokens":19000},
+    {"id":"evt-007","timestamp":"2026-11-02T12:20:00Z","project":"support-agent","provider":"openai","model":"gpt-4.1-mini","inputTokens":74000,"outputTokens":16000},
+    {"id":"evt-008","timestamp":"2026-11-02T13:05:00Z","project":"unknown-model-lab","provider":"custom","model":"custom-llm","inputTokens":30000,"outputTokens":5000}
+  ]
+}

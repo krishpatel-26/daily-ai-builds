@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Token Cost Observatory</title><link rel="stylesheet" href="/styles.css"></head>
+<body><main class="shell">
+<header><div><p class="eyebrow">DAILY AI BUILDS / DAY 028</p><h1>Token Cost <span>Observatory</span></h1><p class="sub">Understand LLM spend before it surprises your budget.</p></div><div class="live"><i></i> LIVE LOCAL DATA</div></header>
+<section class="toolbar"><div><b>Workspace overview</b><small>Sample usage events · USD estimates</small></div><label>Monthly budget ($)<input id="budget" type="number" min="1" step="1" value="100"></label><button id="saveBudget">Update budget</button></section>
+<section class="metrics" id="metrics"></section>
+<section class="grid"><article class="panel wide"><div class="panelhead"><div><h2>Daily spend</h2><small>Estimated cost by event date</small></div><span class="tag">USD</span></div><div id="dailyChart" class="chart"></div></article><article class="panel"><div class="panelhead"><div><h2>Budget health</h2><small>Monthly budget consumption</small></div></div><div id="budgetHealth"></div></article>
+<article class="panel wide"><div class="panelhead"><div><h2>Model breakdown</h2><small>Which models drive spend?</small></div></div><div id="models"></div></article><article class="panel"><div class="panelhead"><div><h2>Project spend</h2><small>Cost by application</small></div></div><div id="projects"></div></article>
+<article class="panel full"><div class="panelhead"><div><h2>Spend alerts</h2><small>Budget and data quality signals</small></div></div><div id="alerts"></div></article></section>
+<section class="panel ingest"><div class="panelhead"><div><h2>Ingest usage event</h2><small>Append a token usage record to this session</small></div><span class="tag">POST /api/events</span></div><textarea id="eventInput" spellcheck="false">{"project":"support-agent","provider":"openai","model":"gpt-4.1-mini","inputTokens":12000,"outputTokens":2500}</textarea><div class="actions"><button id="addEvent">Add event</button><span id="ingestStatus"></span></div></section>
+<footer>OBSERVE → ATTRIBUTE → OPTIMIZE <span>Built with Node.js · Zero dependencies</span></footer>
+</main><script src="/app.js"></script></body></html>

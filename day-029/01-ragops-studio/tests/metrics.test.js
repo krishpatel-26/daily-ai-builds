@@ -1,0 +1,1 @@
+const t=require("node:test"),a=require("node:assert/strict"),m=require("../src/metrics"),r=[{docId:"a"},{docId:"b"}];t("calculates precision recall MRR and nDCG",()=>{a.equal(m.precision(r,["a","c"],2),.5);a.equal(m.recall(r,["a","c"],2),.5);a.equal(m.mrr(r,["b"]),.5);a.ok(m.ndcg(r,["a","b"],2)>.99);});

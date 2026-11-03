@@ -1,0 +1,3 @@
+# Security
+
+This is a local prototype bound to 127.0.0.1. Do not expose it publicly without authentication, authorization, rate limiting, TLS, tenant isolation, and hardened validation. Treat ingested documents and retrieved text as untrusted data. Do not add secrets or personal customer data to benchmark fixtures. In-memory stores reset on restart. Groundedness is a lexical diagnostic, not a factuality or security guarantee.

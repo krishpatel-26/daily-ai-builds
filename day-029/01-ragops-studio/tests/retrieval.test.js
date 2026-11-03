@@ -1,0 +1,1 @@
+const t=require("node:test"),a=require("node:assert/strict"),{searchBM25}=require("../src/bm25");t("ranks relevant lexical match",()=>{const x=searchBM25("retrieval recall",[{id:"1",docId:"r",text:"retrieval recall relevant documents"},{id:"2",docId:"s",text:"security access control"}]);a.equal(x[0].docId,"r");});

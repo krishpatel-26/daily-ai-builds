@@ -1,0 +1,1 @@
+{"name":"ragops-studio","version":"1.0.0","private":true,"scripts":{"start":"node src/server.js","test":"node --test","check":"node --check src/server.js && node --check src/pipeline.js && node --check public/app.js"},"engines":{"node":">=20"}}

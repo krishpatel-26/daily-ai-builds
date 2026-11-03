@@ -1,0 +1,1 @@
+const {tokenize}=require("./tokenize");function groundedness(answer,contexts){const a=[...new Set(tokenize(answer))].filter(x=>x.length>3),c=new Set(tokenize(contexts.join(" "))),supported=a.filter(x=>c.has(x));return{score:a.length?supported.length/a.length:0,supported,unsupported:a.filter(x=>!c.has(x)),method:"lexical-overlap-heuristic"};}module.exports={groundedness};

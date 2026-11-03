@@ -1,0 +1,1 @@
+function compare(a,b){return Object.keys(a.metrics).map(metric=>({metric,current:a.metrics[metric],baseline:b.metrics[metric],delta:a.metrics[metric]-b.metrics[metric]}));}module.exports={compare};

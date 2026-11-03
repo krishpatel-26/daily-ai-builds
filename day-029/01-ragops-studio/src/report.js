@@ -1,0 +1,1 @@
+function report(run){return{title:"RAG Evaluation Report",runId:run.id,createdAt:run.createdAt,config:run.config,totals:run.totals,metrics:run.metrics,gate:run.gate,limitations:["BM25 lexical retrieval only","Groundedness is lexical overlap, not semantic entailment","Extractive benchmark, not live LLM generation"]};}module.exports={report};

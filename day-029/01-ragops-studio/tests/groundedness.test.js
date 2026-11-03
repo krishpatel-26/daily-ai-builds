@@ -1,0 +1,1 @@
+const t=require("node:test"),a=require("node:assert/strict"),{groundedness}=require("../src/groundedness");t("exposes supported and unsupported terms",()=>{const x=groundedness("retrieval quality improves ranking",["retrieval quality ranking"]);a.ok(x.score>.5);a.ok(x.unsupported.includes("improves"));});

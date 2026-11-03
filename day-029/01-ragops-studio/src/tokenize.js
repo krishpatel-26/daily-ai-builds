@@ -1,0 +1,1 @@
+function tokenize(s){return String(s||"").toLowerCase().normalize("NFKC").match(/[a-z0-9]+/g)||[];}module.exports={tokenize};

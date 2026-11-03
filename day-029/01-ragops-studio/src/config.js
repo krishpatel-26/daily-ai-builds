@@ -1,0 +1,1 @@
+module.exports={port:Number(process.env.PORT||4180),host:"127.0.0.1",chunkSize:420,overlap:60,thresholds:{recallAt5:.7,mrr:.65,groundedness:.7}};

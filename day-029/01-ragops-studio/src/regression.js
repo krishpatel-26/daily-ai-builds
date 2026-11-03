@@ -1,0 +1,1 @@
+const {thresholds}=require("./config");function assess(run){const checks=Object.entries(thresholds).map(([metric,min])=>({metric,min,actual:run.metrics[metric],passed:run.metrics[metric]>=min}));return{passed:checks.every(x=>x.passed),checks};}module.exports={assess};

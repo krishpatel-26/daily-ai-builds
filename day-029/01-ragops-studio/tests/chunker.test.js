@@ -1,0 +1,1 @@
+const t=require("node:test"),a=require("node:assert/strict"),{chunkDocument}=require("../src/chunker");t("chunks text with overlap",()=>{const x=chunkDocument({id:"d",text:"one two three four five six seven"},{size:4,overlap:2});a.equal(x.length,3);});t("rejects invalid overlap",()=>a.throws(()=>chunkDocument({id:"d",text:"a b"},{size:2,overlap:2})));

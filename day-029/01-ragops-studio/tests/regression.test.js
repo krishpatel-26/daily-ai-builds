@@ -1,0 +1,1 @@
+const t=require("node:test"),a=require("node:assert/strict"),{assess}=require("../src/regression");t("fails gate below thresholds",()=>a.equal(assess({metrics:{recallAt5:.1,mrr:.1,groundedness:.1}}).passed,false));

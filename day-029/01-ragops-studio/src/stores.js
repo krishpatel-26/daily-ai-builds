@@ -1,0 +1,1 @@
+const {randomUUID}=require("node:crypto");function store(seed=[]){let a=structuredClone(seed);return{list:()=>structuredClone(a),get:id=>structuredClone(a.find(x=>x.id===id)||null),add:x=>{const v={...structuredClone(x),id:x.id||randomUUID()};a.push(v);return structuredClone(v);},remove:id=>{const n=a.length;a=a.filter(x=>x.id!==id);return n!==a.length;}};}module.exports={store};

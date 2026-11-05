@@ -1,0 +1,1 @@
+RULES={"move":{"target":False,"range":None},"interact":{"target":True,"range":2.5},"attack":{"target":True,"range":2.0},"use_item":{"target":False,"range":None},"start_quest":{"target":True,"range":2.5},"talk":{"target":True,"range":3.0}}

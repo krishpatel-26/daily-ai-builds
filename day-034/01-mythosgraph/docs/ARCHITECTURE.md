@@ -1,0 +1,2 @@
+# Architecture
+Event ingestion → witness and visibility resolution → persistent memory records → character-scoped retrieval → context assembly. Canon facts are separate from episodic memories. Proposed claims are checked against matching subject/predicate facts. Relationship changes are recorded as directed social signals. SQLite stores events, witnesses, memories, facts and relationships. Retrieval uses lexical overlap and importance ranking.

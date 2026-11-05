@@ -1,0 +1,2 @@
+# Engine Integration Contract
+The game engine owns position, health, inventory, quest state and simulation tick. The agent service receives a read-only snapshot and returns a typed proposal. The authoritative server validates against current state immediately before execution. Never trust a model-provided snapshot, client-side validation, free-form tool name or generated script. On stale state, reject and request a fresh proposal.

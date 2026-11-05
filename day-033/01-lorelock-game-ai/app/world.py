@@ -1,0 +1,7 @@
+from copy import deepcopy
+SEED={"tick":1,"actors":{"player":{"id":"player","name":"Adventurer","kind":"player","x":0,"y":0,"alive":True,"inventory":["rusty_sword","healing_potion"],"hp":80,"quest_flags":[]},"elder":{"id":"elder","name":"Village Elder","kind":"npc","x":2,"y":1,"alive":True,"inventory":[],"hp":40,"quest_flags":[]},"goblin":{"id":"goblin","name":"Cave Goblin","kind":"enemy","x":4,"y":0,"alive":True,"inventory":[],"hp":30,"quest_flags":[]}},"items":{"rusty_sword":{"damage":12,"usable":False},"healing_potion":{"heal":25,"usable":True}},"quests":{"goblin_threat":{"title":"The Goblin Threat","available":True}},"locations":{"village":{"x":0,"y":0},"cave":{"x":8,"y":0}},"lore":[{"id":"lore-001","text":"The Village Elder lives near the village square and asks the adventurer to investigate the goblin threat.","tags":["elder","village","quest"]},{"id":"lore-002","text":"The goblin threat concerns a goblin spotted near the eastern cave entrance.","tags":["goblin","cave","quest"]},{"id":"lore-003","text":"A healing potion restores twenty-five health points when used by its carrier.","tags":["potion","healing","item"]}],"event_log":[]}
+STATE=deepcopy(SEED)
+def reset():
+ global STATE
+ STATE=deepcopy(SEED);return snapshot()
+def snapshot():return deepcopy(STATE)

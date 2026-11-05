@@ -1,0 +1,2 @@
+# Threat Model
+Untrusted: LLM proposals, rationale, player prompts, model-generated entity/item/quest IDs. Protected: authoritative world, inventory, health, quest flags, event history. Controls: strict schema, allowlist, server-owned registries, range/alive/inventory checks, isolated transition module, lore fallback and idempotency. Residual risks: no authentication, multiplayer concurrency, durable storage, rate limits or prompt-injection defense. Production must validate every command at simulation boundary.

@@ -1,0 +1,2 @@
+# Knowledge Model
+Canon: shared curated facts. Witnessed episodic memory: events observed by a character. Public memory: events explicitly marked public. Private event: visible only to actor and authorized witnesses. Hearsay is a future extension and must retain speaker/source and confidence. Relationship state is a directed score from -100 to +100, not objective truth. Never infer NPC knowledge merely because an event exists globally.

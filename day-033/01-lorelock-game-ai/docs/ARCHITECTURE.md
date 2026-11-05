@@ -1,0 +1,2 @@
+# Architecture
+Model/planner proposes typed action → strict schema → server allowlist → world-state preconditions → deterministic transition engine → audit event. Dialogue uses curated lore retrieval and returns source IDs or safe fallback. Model has no direct state-write capability.

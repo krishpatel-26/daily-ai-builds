@@ -1,0 +1,2 @@
+# Rejection and Retry Policy
+Return stable reason codes and bounded hints. Planner may receive latest authoritative state and generate a limited revised proposal. Never retry unchanged actions or weaken validation. If no valid action exists, ask the player or use a game-authored fallback.

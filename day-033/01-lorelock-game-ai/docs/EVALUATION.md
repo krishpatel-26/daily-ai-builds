@@ -1,0 +1,2 @@
+# Evaluation Plan
+Test valid/invalid actions, invented entities, missing quests, impossible ranges, dead targets, absent inventory, repeated request IDs and unknown lore facts. Measure invalid-action acceptance, valid-action rejection, unsupported dialogue claims, citation coverage, duplicate transition rate and p95 validation latency. Evaluate real LLM proposals separately. Lexical similarity is not semantic truth.

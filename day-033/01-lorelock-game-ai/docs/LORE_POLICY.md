@@ -1,0 +1,2 @@
+# Lore Grounding Policy
+Curated canon is source of truth. Retrieved facts retain source IDs. Weak matches are rejected. No evidence means no factual assertion. Dialogue retrieval cannot grant inventory, quest progress or world mutations. Production needs versioned structured lore, semantic retrieval evaluation and contradiction checks.

@@ -1,0 +1,3 @@
+from .schemas import ActionProposal
+CASES={"safe":{"request_id":"demo-talk-01","actor_id":"player","action":"talk","target_id":"elder"},"hallucinated":{"request_id":"demo-fake-01","actor_id":"player","action":"start_quest","target_id":"dragon_quest"},"range":{"request_id":"demo-range-01","actor_id":"player","action":"attack","target_id":"goblin"},"item":{"request_id":"demo-item-01","actor_id":"player","action":"use_item","item_id":"phoenix_elixir"}}
+def propose(kind):return ActionProposal(**CASES[kind])

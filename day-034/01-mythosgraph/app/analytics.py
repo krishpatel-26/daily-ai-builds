@@ -1,0 +1,3 @@
+from .database import connect
+def overview():
+ with connect() as c:return {"events":c.execute("SELECT COUNT(*) FROM events").fetchone()[0],"memories":c.execute("SELECT COUNT(*) FROM memories").fetchone()[0],"facts":c.execute("SELECT COUNT(*) FROM facts").fetchone()[0],"relationships":c.execute("SELECT COUNT(*) FROM relationships").fetchone()[0],"event_types":[dict(r) for r in c.execute("SELECT event_type,COUNT(*) AS count FROM events GROUP BY event_type")]}

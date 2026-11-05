@@ -1,0 +1,2 @@
+# Evaluation Plan
+Build held-out event histories and recall questions. Measure character-knowledge leakage, recall precision/recall, event attribution, stale-memory ranking, contradiction detection precision/recall and relationship update correctness. Test the same event across different witnesses and visibility settings. Current retrieval is lexical and scoring heuristic, not semantic memory evaluation.

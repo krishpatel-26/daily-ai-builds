@@ -1,0 +1,2 @@
+# Architecture
+Structured world snapshot → deterministic candidate templates → schema validation → entity and prerequisite checks → duplicate filtering → explainable scoring → explicit quest acceptance → lifecycle event. The planner has no direct authority to mutate the world. A game server must revalidate immediately before accepting a candidate.

@@ -1,0 +1,2 @@
+# Evaluation Plan
+Measure feasible-quest rate, invalid-target acceptance rate, duplicate rate, objective completion rate, narrative relevance and player-rated variety. Include adversarial proposals with invented actors, items, locations, impossible prerequisites, duplicate objectives and extreme rewards. Track candidate latency and acceptance conversion. Current tests use a small synthetic world and deterministic templates.

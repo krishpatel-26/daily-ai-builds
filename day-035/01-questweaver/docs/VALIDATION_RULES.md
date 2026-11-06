@@ -1,0 +1,2 @@
+# Validation Rules
+Every giver must exist and be available. Every objective kind maps to a server-owned registry. Every target must exist in that registry. Prerequisites must be completed. Reward items must exist. Objective identifiers must be unique. A quest ID or objective pattern already active/completed is rejected. Unknown objective kinds fail closed.

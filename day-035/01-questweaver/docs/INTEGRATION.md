@@ -1,0 +1,2 @@
+# Engine Integration
+Expose a read-only world snapshot to the planner. Treat generated quests as untrusted proposals. Validate at the authoritative simulation boundary using current state. On acceptance, create a server-owned quest record and emit an audit event. Objective progress must be updated by verified game events, never by free-form model claims. Integrate NPC knowledge from MythosGraph only through character-scoped context.

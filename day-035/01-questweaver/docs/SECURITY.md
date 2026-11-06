@@ -1,0 +1,2 @@
+# Security Boundaries
+The planner is not authoritative. Never execute model-generated scripts or accept client-side validation. Revalidate proposals against current server state. Authenticate player and NPC identities, authorize quest acceptance, rate-limit generation, and persist acceptance with transactional uniqueness in production. This local demo omits authentication and multiplayer concurrency.

@@ -1,0 +1,2 @@
+# Relationship Model
+Each directed edge stores trust, fear, loyalty and rivalry in [-100,100]. Independent signals, not a single friendship score. Actions apply authored deltas scaled by bounded intensity. Future extensions: decay, evidence, temporal history and character-specific modifiers.

@@ -1,0 +1,2 @@
+def overview(s):
+ e=list(s["relationships"].values());return {"edges":len(e),"mean_trust":round(sum(x["trust"] for x in e)/max(1,len(e)),2),"high_rivalry":[x for x in e if x["rivalry"]>=20],"high_loyalty":[x for x in e if x["loyalty"]>=20],"rumours":len(s["rumours"]),"events":len(s["events"]),"tick":s["tick"]}

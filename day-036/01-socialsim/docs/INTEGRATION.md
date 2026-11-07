@@ -1,0 +1,2 @@
+# Integration
+MythosGraph supplies character-scoped episodic context. SocialSim maintains relationship state and emergent social signals. QuestWeaver can consume approved event proposals as quest triggers. LoreLock remains the authoritative action gate. Keep state server-owned.

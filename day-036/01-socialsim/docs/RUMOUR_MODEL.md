@@ -1,0 +1,2 @@
+# Rumour Model
+Rumours store source, subject, claim, confidence, audience, hop count and tick. Propagation reduces confidence by a fixed decay factor and stops after bounded hops. Future work: provenance, corroboration, contradictory claims and per-character belief state.

@@ -1,0 +1,2 @@
+# Emergent Rules
+Trust <= -20: NPC may refuse personal requests. Fear >= 30: NPC may avoid player. Loyalty >= 30: NPC may offer support. Rivalry >= 30: NPC may challenge player. Illustrative thresholds; rules emit candidate events, game server decides whether to enact them.

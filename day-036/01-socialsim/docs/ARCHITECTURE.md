@@ -1,0 +1,2 @@
+# Architecture
+Social action → directed relationship updates → bounded rumour propagation → rule evaluation → emergent event output. State is explicit and inspectable. Reverse effects are smaller and separately recorded. No LLM calls or generated code execution.

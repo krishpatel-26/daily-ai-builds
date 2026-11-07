@@ -1,0 +1,2 @@
+# Evaluation Plan
+Measure update determinism, score-bound violations, rumour confidence monotonicity, duplicate propagation, event-trigger precision and replay reproducibility. Test unknown identities, self-targeted actions, max intensity, cyclic audiences and repeated ticks. Synthetic state and hand-authored rules.

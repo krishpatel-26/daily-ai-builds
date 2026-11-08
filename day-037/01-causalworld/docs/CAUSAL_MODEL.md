@@ -1,0 +1,2 @@
+# Causal Model
+Eight bounded variables model reputation, village trust, faction tension, resource supply, guard readiness, NPC support, quest access and regional stability. Reputation and supply are exogenous roots. Remaining variables use deterministic authored equations. Scores are normalized 0–100.

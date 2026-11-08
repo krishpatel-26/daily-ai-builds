@@ -1,0 +1,2 @@
+# Architecture
+Structural causal model → DAG validation → topological evaluation → direct intervention → baseline/counterfactual comparison → impact explanation. Interventions set variables directly; descendants are recomputed using authored structural equations.

@@ -1,0 +1,2 @@
+# Interventions
+An intervention explicitly sets one or more model variables. Unknown variables are rejected, values are bounded and descendants recomputed in topological order. This is a model intervention, not an observation-conditioned forecast.

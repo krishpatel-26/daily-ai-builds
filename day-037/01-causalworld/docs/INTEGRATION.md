@@ -1,0 +1,2 @@
+# Game Integration
+SocialSim provides relationship signals. CausalWorld models how selected changes may propagate to faction tension, NPC support and quest access. QuestWeaver may consume scenario results as planning context. LoreLock must validate actions against authoritative live game state. Predictions never grant execution permission.

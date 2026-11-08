@@ -1,0 +1,2 @@
+# Safety and Limitations
+The graph encodes assumptions; it does not establish causation. Outputs depend on authored equations and synthetic values. Do not present deterministic scores as probabilities or guarantees. Keep simulation advisory and use authoritative engine checks before modifying a live world.

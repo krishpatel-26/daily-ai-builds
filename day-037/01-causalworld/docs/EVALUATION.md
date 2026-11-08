@@ -1,0 +1,2 @@
+# Evaluation Plan
+Test DAG acyclicity, topological ordering, intervention invariance, bounded outputs, deterministic replay and expected descendant changes. A learned model would require held-out simulated environments, intervention datasets, calibration and counterfactual consistency. Software tests do not validate causal truth.

@@ -1,0 +1,2 @@
+# API Contract
+GET /api/model returns graph, validation, variable catalog and baseline. GET /api/explain/{variable} returns parent links and root paths. POST /api/simulate accepts a scenario name and one or more variable/value interventions. POST /api/compare evaluates multiple scenarios. GET /api/analytics returns impact summaries. Validation errors use HTTP 422.

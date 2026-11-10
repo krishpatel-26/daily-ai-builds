@@ -1,0 +1,3 @@
+def summary(s):
+ agents=list(s["agents"].values());alive=[a for a in agents if a["alive"]]
+ return {"turn":s["turn"],"agents":len(agents),"alive":len(alive),"eliminated":len(agents)-len(alive),"blue_score":s["scores"]["blue"],"red_score":s["scores"]["red"],"resources":dict(s["resources"]),"events":len(s["log"]),"mean_hp":round(sum(a["hp"] for a in alive)/max(1,len(alive)),2),"mean_energy":round(sum(a["energy"] for a in alive)/max(1,len(alive)),2)}

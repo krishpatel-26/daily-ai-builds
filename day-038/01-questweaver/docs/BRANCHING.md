@@ -1,0 +1,2 @@
+# Branching Rules
+Branches use bounded operators (gte, lt) against named world-state fields. A selected route highlights the objective or approach relevant to current conditions. Future versions can support optional objectives, failure states and rejoin nodes.

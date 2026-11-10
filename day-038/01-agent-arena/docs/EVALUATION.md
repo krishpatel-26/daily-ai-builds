@@ -1,0 +1,2 @@
+# Evaluation Plan
+Track reward/score, survival, resource efficiency, invalid action rate, policy diversity and action distribution. Run repeated seeded episodes and compare policies against random and scripted baselines. Current demo uses a fixed synthetic initial state and deterministic heuristic policies; no statistical performance claims.

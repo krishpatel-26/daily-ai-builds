@@ -1,0 +1,2 @@
+# Quest Model
+Each template includes an ID, theme, description, world-state thresholds, priority, ordered objectives and conditional branches. A recommendation includes score, reasons, selected route and objective sequence. Scores are heuristic ranks, not probabilities.

@@ -1,0 +1,2 @@
+# Conflict Resolution
+Proposals are sorted by descending utility, then stable agent ID. Each agent may submit one action per turn. State is revalidated immediately before applying each accepted proposal. Future extensions: simultaneous resolution, reservations, locks, collision handling and deterministic tie-break policies.

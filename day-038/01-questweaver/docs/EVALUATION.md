@@ -1,0 +1,2 @@
+# Evaluation Plan
+Test deterministic ranking, eligibility under threshold changes, valid objective references, acyclic objective dependencies, unknown completed objectives and API schema rejection. Human evaluation should assess narrative coherence, player agency, pacing and repetitive quest patterns.

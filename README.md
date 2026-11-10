@@ -21,7 +21,6 @@ A daily engineering portfolio covering AI Agents, LLMs, RAG, automation, APIs, G
 
 Build complete systems rather than isolated snippets. Projects emphasize clear module boundaries, typed inputs, persistence where useful, tests, APIs, local fallbacks, and documentation.
 
-
 ## Hiring-focused flagship builds
 
 ### Day 011 — Customer Deployment OS
@@ -38,24 +37,21 @@ CSV sensor telemetry analysis, timestamp-gap detection, potential spike detectio
 
 [Portfolio project index](PORTFOLIO_PROJECTS.md) · [LinkedIn launch post draft](LINKEDIN_PORTFOLIO_LAUNCH_POST.md)
 
-Note: these are early prototypes with manual test checklists. Browser QA and complete automated test execution remain outstanding; heuristic output should be treated as a candidate for review rather than validated ground truth.
+Note: early prototypes may include manual test checklists. Browser QA and complete automated test execution must be verified per project; heuristic output should be treated as a candidate for review rather than validated ground truth.
 
-
-## Day 014 — Agent Reliability Workbench
+### Day 014 — Agent Reliability Workbench
 A local-first evaluation workbench for regression cases, pass/fail/review outcomes, synthetic traces, prompt risk checks, and a dependency-free Python CLI with deterministic graders and unit tests.
+[Open project](https://github.com/krishpatel-26/daily-ai-builds/tree/main/day-014/01-agent-reliability-workbench)
 
-- [Open the project](https://github.com/krishpatel-26/daily-ai-builds/tree/main/day-014/01-agent-reliability-workbench)
-- [Read the project README](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-014/01-agent-reliability-workbench/README.md)
-- [LinkedIn post draft](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-014/01-agent-reliability-workbench/docs/POST_COPY.md)
-
-Important: the UI's run history and timings are synthetic demo data. The Python CLI runs deterministic checks against fixed output samples; no live model provider is invoked. Browser QA and Python tests still need to be run before presenting test status as verified.
-
-
-## Day 023 — API Rate Limit & Quota Lab
+### Day 023 — API Rate Limit & Quota Lab
 A local-first dashboard to replay synthetic API traffic against fixed-window, sliding-window and token-bucket algorithms, inspect HTTP 429 and Retry-After behavior, and export quota incident evidence.
+[Open project](https://github.com/krishpatel-26/daily-ai-builds/tree/main/day-023/01-api-rate-limit-quota-lab)
 
-- [Open the project](https://github.com/krishpatel-26/daily-ai-builds/tree/main/day-023/01-api-rate-limit-quota-lab)
-- [Read the project README](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-023/01-api-rate-limit-quota-lab/README.md)
-- [View the Day 023 commits](https://github.com/krishpatel-26/daily-ai-builds/commits/main/day-023/01-api-rate-limit-quota-lab)
+### Day 026 — Feature Flag Rollout Simulator
+[Open project](https://github.com/krishpatel-26/daily-ai-builds/tree/main/day-026/01-feature-flag-rollout-simulator)
 
-The replay uses synthetic requests only. Verification for this build includes JavaScript syntax checks and isolated execution of the committed test cases; the full native npm test command and browser QA have not been run in this environment.
+### Day 027 — AgentGuard: AI Agent Permission & Action Guard
+A local-first policy gateway that evaluates proposed agent actions against role/action allowlists, risk rules, state preconditions, human approval gates, and a SQLite audit trail. The prototype simulates decisions and does not execute external tools.
+- [Open project](https://github.com/krishpatel-26/daily-ai-builds/tree/main/day-027/01-agentguard)
+- [Project README](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-027/01-agentguard/README.md)
+- [Threat model](https://github.com/krishpatel-26/daily-ai-builds/blob/main/day-027/01-agentguard/docs/threat-model.md)

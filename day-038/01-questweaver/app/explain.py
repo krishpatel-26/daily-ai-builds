@@ -1,0 +1,2 @@
+def explain(q):
+ return {"quest_id":q["quest_id"],"why_recommended":q["reasons"],"score":q["score"],"selected_route":q["selected_route"],"objective_count":len(q["objectives"]),"planning_note":"Rank is a deterministic heuristic, not a probability of player enjoyment."}

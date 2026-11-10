@@ -1,0 +1,2 @@
+# Action Contract
+Supported actions: move, gather, guard, attack, rest and trade. Every proposal identifies an agent and optional target/destination. Validation checks identity, alive state, energy, target team, map bounds and stock availability. Invalid actions are rejected with a machine-readable reason.

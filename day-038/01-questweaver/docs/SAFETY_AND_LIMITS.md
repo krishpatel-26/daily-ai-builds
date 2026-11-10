@@ -1,0 +1,2 @@
+# Safety and Limitations
+The prototype uses synthetic state and authored quest templates. Ranking is heuristic and does not estimate enjoyment. Plans are advisory. A game server must independently validate inventory, permissions, prerequisites, actor availability and state transitions before executing objectives.

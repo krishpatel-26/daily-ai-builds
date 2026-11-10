@@ -1,0 +1,2 @@
+# Architecture
+World state → template eligibility and scoring → branch selection → objective dependency validation → ranked recommendations → explainability output. State and templates are explicit; the engine is deterministic and inspectable.

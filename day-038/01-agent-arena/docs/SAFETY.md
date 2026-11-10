@@ -1,0 +1,2 @@
+# Safety and Trust Boundaries
+The browser submits policy changes and turn requests; the server owns world state and validates actions. Never trust client-provided scores, agent health or action permissions. Before multiplayer deployment add authentication, rate limits, persistence and per-match authorization.

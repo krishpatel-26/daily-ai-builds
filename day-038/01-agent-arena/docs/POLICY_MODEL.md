@@ -1,0 +1,2 @@
+# Policy Model
+Four authored policies assign different utility weights to gather, guard, rest, trade and attack. Context modifiers adjust utility for low energy, low health and scarce food. The highest-scoring valid proposal is selected. This is a transparent heuristic baseline, not learned reinforcement learning.

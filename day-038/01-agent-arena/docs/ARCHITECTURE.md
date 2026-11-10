@@ -1,0 +1,2 @@
+# Architecture
+Observation → candidate action generation → utility scoring → precondition validation → initiative ordering → authoritative state transition → event log and metrics. The engine revalidates every proposal immediately before execution.

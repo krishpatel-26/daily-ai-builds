@@ -1,0 +1,2 @@
+# Game Architecture Integration
+SocialSim provides relationship signals. CausalWorld provides counterfactual context. QuestWeaver consumes approved world state and emits structured quest proposals. LoreLock validates action execution against authoritative game state. Generated plans never bypass server-side permissions or world invariants.

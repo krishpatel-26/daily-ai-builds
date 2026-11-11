@@ -1,0 +1,2 @@
+# Observation Space
+Each agent observes energy bucket, health bucket, coarse distance to opponent, whether its score is at least tied, and whether resources remain. This compact discrete tuple becomes a Q-table key. It omits full map state and is intentionally partially observable.

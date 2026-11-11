@@ -1,0 +1,2 @@
+# Hyperparameters
+Alpha controls Q-value update rate. Gamma discounts future reward. Epsilon controls random exploration and decays linearly with a floor during training. Evaluation fixes epsilon to zero. Record the seed and all parameters to reproduce an experiment.

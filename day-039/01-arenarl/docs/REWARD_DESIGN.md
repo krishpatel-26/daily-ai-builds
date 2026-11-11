@@ -1,0 +1,2 @@
+# Reward Design
+Small step cost encourages progress. Gathering yields positive reward and objective score. Successful attacks earn a modest reward and penalize the target; elimination adds a terminal bonus. Resting has a small recovery reward. Reward shaping is deliberately simple and can create unintended incentives; compare against task-level outcomes.

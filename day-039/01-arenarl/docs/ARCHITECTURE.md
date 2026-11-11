@@ -1,0 +1,2 @@
+# Architecture
+Episode reset → discrete observation encoding → epsilon-greedy policy selection → shared environment transition → per-agent reward → Q-table update → episode metrics. Training and evaluation are separate: evaluation uses greedy actions and a selected baseline opponent.

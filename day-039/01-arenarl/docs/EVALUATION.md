@@ -1,0 +1,2 @@
+# Evaluation Protocol
+Evaluate the trained blue policy over independent seeded episodes against a fixed heuristic or random red opponent. Report win rate, reward and score averages. For credible comparisons, run multiple seeds, report confidence intervals and compare against random, heuristic and self-play baselines. One small run is not evidence of general superiority.

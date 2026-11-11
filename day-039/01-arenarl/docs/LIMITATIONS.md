@@ -1,0 +1,2 @@
+# Limitations
+Independent tabular Q-learning has no centralized critic, opponent modelling or learned communication. The state space is small and discretized. Environment and rewards are authored and deterministic. The project is an educational research baseline, not deep MARL or a benchmark result.

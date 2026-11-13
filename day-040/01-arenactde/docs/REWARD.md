@@ -1,0 +1,2 @@
+# Reward Design
+A small per-step penalty encourages efficiency; reaching the goal together gives shared terminal reward. Claiming at the goal provides a small shaping reward. Reward design is a modelling choice; report task success separately from shaped return.

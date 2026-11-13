@@ -1,0 +1,2 @@
+# Environment
+Two agents move on a one-dimensional corridor toward a shared goal. Actions: move right, move left, rest, claim at goal, guard. Local observations include own status, coarse opponent position, goal distance and time. The critic receives concatenated observations and global context.

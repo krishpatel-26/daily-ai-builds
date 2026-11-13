@@ -1,0 +1,2 @@
+# Training
+The prototype uses a shared graph-attention actor and centralized critic. Rollouts are collected in the cooperative corridor. Generalized Advantage Estimation computes returns and advantages. A clipped PPO-style objective updates the actor, with value regression for the critic. This compact implementation is intended for architectural exploration, not as a canonical MAPPO reproduction.

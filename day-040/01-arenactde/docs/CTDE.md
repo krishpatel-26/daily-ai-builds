@@ -1,0 +1,2 @@
+# CTDE
+Centralized Training, Decentralized Execution separates privileged training information from deployment observations. This project shares actor weights across agents; each actor call sees only one local observation. The critic sees concatenated observations and global task context.

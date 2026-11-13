@@ -1,0 +1,1 @@
+"""GraphMind multi-agent communication research prototype."""

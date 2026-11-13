@@ -1,0 +1,2 @@
+# PPO
+Categorical policy, clipped probability ratio objective, entropy regularization, value regression and gradient norm clipping. This compact implementation omits minibatch shuffling, value clipping, adaptive schedules and distributed rollout workers.

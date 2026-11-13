@@ -1,0 +1,2 @@
+# Architecture
+Each agent receives a 6-value local observation. A radius-based adjacency matrix defines which agents can exchange messages. A graph-attention layer projects observations, computes neighbour attention scores and aggregates messages. A shared actor maps local observation plus aggregated message to action logits. A centralized critic estimates value from the joint observation during training.

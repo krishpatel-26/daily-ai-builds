@@ -1,0 +1,2 @@
+# Evaluation
+Evaluate deterministic argmax actions on held-out environment seeds. Report success rate, mean return and episode length. For credible claims, compare random and scripted baselines, run many seeds and report uncertainty. A single curve is not proof of convergence.

@@ -1,0 +1,2 @@
+# Architecture
+Local observations → shared actor → decentralized actions. Joint state → centralized critic → value estimates. PPO updates the shared actor using clipped policy ratios; GAE estimates advantages. The critic is a training aid and is not required for decentralized action selection.

@@ -1,0 +1,2 @@
+# Graph Attention
+For each directed pair (i,j), attention logits are computed from projected node features and masked by the adjacency matrix. Softmax is applied over each receiver's permitted neighbours. The weighted neighbour representation becomes the message aggregate. Self-loops preserve access to the agent's own representation. This is a compact single-head GAT-style layer.

@@ -1,0 +1,2 @@
+# Communication Protocol
+The prototype exchanges learned latent representations rather than natural-language messages. The adjacency graph is rebuilt from current positions at each environment step. This keeps communication local and makes edge counts measurable. The topology is rule-based; learning the topology is a future experiment.

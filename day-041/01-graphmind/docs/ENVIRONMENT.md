@@ -1,0 +1,2 @@
+# Environment
+Four agents move on a one-dimensional corridor with individual goal positions. Each action is stay, move left or move right. Agents receive local observations containing normalized own position, goal, signed and absolute distance, nearest-agent distance and timestep. Shared rewards encourage progress; collisions incur penalties; all-goal completion provides a team bonus.

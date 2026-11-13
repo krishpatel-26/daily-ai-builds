@@ -1,0 +1,2 @@
+# Evaluation Protocol
+The API evaluates a trained actor on held-out seeds with graph messages enabled and disabled. Report task success rate, mean episode return, mean episode length and mean communication edge count. A sound study should repeat across many seeds, include independent-policy and fixed-topology baselines, report confidence intervals and test robustness to missing agents.

@@ -1,0 +1,2 @@
+# GAE
+Generalized Advantage Estimation combines temporal-difference residuals with gamma and lambda. Terminal masks stop bootstrap across episode boundaries. The compact collector uses a zero terminal bootstrap; production collectors should explicitly bootstrap truncated nonterminal segments.

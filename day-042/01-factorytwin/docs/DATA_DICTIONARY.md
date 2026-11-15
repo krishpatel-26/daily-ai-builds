@@ -1,0 +1,2 @@
+# Data dictionary
+machine_id: asset identifier. timestamp: synthetic sample index. temperature: Celsius. vibration: normalized demo amplitude. current: amperes. pressure: bar. throughput: normalized production-rate index. risk_score: bounded heuristic from 0 to 1, not calibrated probability.

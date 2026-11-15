@@ -1,0 +1,2 @@
+# Architecture
+Untrusted model proposal → typed schema → allowlist → evidence grounding → authoritative world-state preconditions → deterministic executor → audit event. The model is not authoritative for inventory, health, visibility, doors or quest flags.

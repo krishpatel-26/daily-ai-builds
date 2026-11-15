@@ -1,0 +1,2 @@
+# Game engine integration
+Call the validator at a trusted server boundary. Serialize authoritative observations, execute only accepted actions, and re-check preconditions at commit time. Never let model output write inventory or quest flags directly.

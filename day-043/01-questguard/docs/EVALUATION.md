@@ -1,0 +1,2 @@
+# Evaluation protocol
+Measure invalid-action rejection recall, valid-action acceptance, false rejection, state mutation on rejection, validation latency and audit completeness. Current demo is illustrative; no benchmark performance is claimed.

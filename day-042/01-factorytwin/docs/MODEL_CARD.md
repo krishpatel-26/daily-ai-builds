@@ -1,0 +1,2 @@
+# Model and decision card
+System: deterministic condition-scoring prototype. Inputs: five sensor channels, timestamp and asset ID. Outputs: anomaly score, heuristic risk band, diagnostic hints, inspection window and production exposure. Scores are not failure probabilities or RUL estimates. Intended for education, offline workflow prototyping and engineering exploration. Not for autonomous shutdown, safety interlocks or maintenance authorization.

@@ -1,0 +1,1 @@
+def summarize(rows): n=len(rows);a=sum(x["accepted"] for x in rows);return {"proposals":n,"accepted":a,"rejected":n-a,"acceptance_rate":round(a/max(1,n),3)}

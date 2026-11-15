@@ -1,0 +1,2 @@
+def propose(state,npc):return {"title":"Recover the missing supply crate","giver":npc,"required_flag":"crate_recovered"} if npc in state.visible_entities else None
+def can_complete(state,quest):return bool(state.flags.get(quest["required_flag"],False))

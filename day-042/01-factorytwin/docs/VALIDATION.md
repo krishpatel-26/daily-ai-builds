@@ -1,0 +1,2 @@
+# Validation plan
+Validate sensor calibration; label historical failure windows; split data by time and asset to prevent leakage; compare against simple baselines; measure precision and recall at actionable lead times; track false alarms per asset-day; calibrate scores; test missing and stuck sensors; evaluate drift; run in shadow mode; obtain plant safety and cybersecurity approvals.

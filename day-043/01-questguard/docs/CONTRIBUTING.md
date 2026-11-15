@@ -1,0 +1,2 @@
+# Contributing
+For each new action, add a typed contract, server-side preconditions, explicit rejection codes, positive and adversarial tests, and documentation. Keep authoritative mutations inside the executor.

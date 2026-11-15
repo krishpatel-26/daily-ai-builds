@@ -1,0 +1,2 @@
+# Scoring methodology
+Each sensor's latest reading is compared with a fixed demo range, normalized by range width and capped at one. Contributions are averaged. Fleet risk combines 62% anomaly score, 23% maximum absolute feature slope scaled by 12 and 15% asset criticality. Constants are illustrative and must be calibrated using plant-specific historical data.

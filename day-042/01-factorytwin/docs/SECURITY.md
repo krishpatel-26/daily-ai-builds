@@ -1,0 +1,2 @@
+# Security notes
+Prototype only. Do not expose publicly or connect directly to production OT. Add authentication, authorization, TLS, audit logging, secrets management and network segmentation before deployment. Never allow this service to issue PLC commands or bypass safety controls. Treat telemetry as operationally sensitive.

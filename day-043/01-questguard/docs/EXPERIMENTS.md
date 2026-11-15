@@ -1,0 +1,2 @@
+# Experiments
+Compare unconstrained proposals with schema-only, schema-plus-grounding and full precondition validation. Track hallucinated-target acceptance, impossible action rate, quest corruption and valid-action false rejection.

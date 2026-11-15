@@ -1,0 +1,3 @@
+from questguard.models import *
+def world():return WorldState(inventory=["healing_potion","iron_key"],visible_entities=["guard","merchant","wolf","ancient_door"],locked_doors=["ancient_door"],active_quests=["missing_crate"])
+def cases():return [ProposedAction(action=Action.TALK,target="guard",evidence=["guard"]),ProposedAction(action=Action.ATTACK,target="dragon",evidence=["dragon"]),ProposedAction(action=Action.MOVE,destination="moon",evidence=["village_square"]),ProposedAction(action=Action.OPEN_DOOR,target="ancient_door",evidence=["ancient_door"])]

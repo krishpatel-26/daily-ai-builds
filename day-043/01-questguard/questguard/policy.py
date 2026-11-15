@@ -1,0 +1,1 @@
+ALLOWED={"move","talk","attack","open_door","give_item","accept_quest","complete_quest","wait"}; TARGET_REQUIRED={"talk","attack","open_door","give_item","accept_quest","complete_quest"}; DESTINATIONS={"village_square","forest_path","blacksmith","castle_gate","tavern"}

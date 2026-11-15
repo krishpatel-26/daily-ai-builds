@@ -1,0 +1,2 @@
+# Threat model
+Threats: fabricated entities, impossible navigation, stale door state, invented inventory and unauthorized quest completion. Controls: typed payloads, allowlisted actions, exact state checks and rejection without mutation.

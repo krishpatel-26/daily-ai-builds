@@ -1,0 +1,1 @@
+def grounded(s,p): facts={s.location,*s.visible_entities,*s.inventory,*s.active_quests,*s.completed_quests,*s.locked_doors}; facts.update(k for k,v in s.flags.items() if v); return p.confidence>=.25 and bool(p.evidence) and any(x in facts for x in p.evidence)

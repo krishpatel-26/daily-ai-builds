@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import {progress} from "../src/progress.js";test("calculates progress",()=>assert.deepEqual(progress([{done:true},{done:false}]),{total:2,completed:1,remaining:1,percent:50}));test("empty list is zero",()=>assert.equal(progress([]).percent,0));

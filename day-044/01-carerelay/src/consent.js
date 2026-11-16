@@ -1,0 +1,1 @@
+export function consentRecord({subjectId,scope,granted=false,recordedAt=new Date().toISOString()}={}){if(!subjectId||!scope)throw new Error("subjectId and scope are required");return {subjectId,scope,granted:Boolean(granted),recordedAt,version:1}}

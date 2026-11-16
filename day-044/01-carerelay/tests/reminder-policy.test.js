@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import {reminderEligibility} from "../src/reminder-policy.js";test("requires all safeguards",()=>assert.equal(reminderEligibility({optedIn:true,authenticated:true,careTeamApproved:true}).eligible,true));test("defaults off",()=>assert.equal(reminderEligibility().eligible,false));

@@ -1,0 +1,2 @@
+# Roadmap
+Clinician-reviewed instruction templates; secure accounts and consent; patient/caregiver permissions; opt-in reminders; interoperability after privacy and regulatory review; multilingual support evaluated with clinicians; prospective usability and safety studies.

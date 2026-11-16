@@ -1,0 +1,2 @@
+# User stories
+Patients want written instructions represented as tasks. Caregivers need a shared view only with permission. Clinicians need patients to retain original instructions and ask when unclear.

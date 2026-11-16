@@ -1,0 +1,2 @@
+# Safety and intended use
+CareRelay is an organizational prototype, not a medical device, clinical decision-support system, diagnostic tool or substitute for a clinician. It does not recommend or modify treatment. Users must compare extracted checklist items with the original care-team instructions. For urgent symptoms or emergencies, contact local emergency services or the treating team. Do not use the demo to decide whether symptoms are safe.

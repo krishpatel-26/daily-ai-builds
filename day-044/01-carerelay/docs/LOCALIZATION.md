@@ -1,0 +1,2 @@
+# Localization
+Future localization needs translated UI strings, local date formats, plain-language review and clinician validation of translated instructions. Translation must not alter clinical meaning.

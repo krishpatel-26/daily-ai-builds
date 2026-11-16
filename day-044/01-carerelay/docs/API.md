@@ -1,0 +1,2 @@
+# API
+GET /api/health — service status. POST /api/plans — create a plan from supplied instructions. GET /api/plans — list in-memory plans. PATCH /api/plans/{planId}/items/{itemId} — update completion status. No clinical interpretation endpoint exists.

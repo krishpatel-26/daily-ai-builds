@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import {redactCommonIdentifiers} from "../src/redaction.js";test("redacts email and phone patterns",()=>{const s=redactCommonIdentifiers("person@example.com 9876543210");assert.doesNotMatch(s,/person@example.com|9876543210/)})

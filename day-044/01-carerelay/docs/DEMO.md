@@ -1,0 +1,2 @@
+# Demo
+Use fictional text such as: “Call the clinic to confirm the follow-up appointment.” “Keep the printed wound-care instructions available.” “Ask the pharmacist if the medication schedule is unclear.” These are sample organizational tasks, not recommendations.

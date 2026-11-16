@@ -1,0 +1,2 @@
+# Threat model
+Risks include sensitive data exposure, malformed payloads, misleading extraction, unauthorized access and users mistaking organization for clinical validation. Mitigations in prototype: input bounds, no persistent storage, output escaping and explicit safety notices. Production requires authentication, authorization, encryption, audit controls, secure hosting and clinical governance.

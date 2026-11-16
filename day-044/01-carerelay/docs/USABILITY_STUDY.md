@@ -1,0 +1,2 @@
+# Usability study proposal
+Test with diverse patients and caregivers using fictional data. Measure task completion, comprehension of limitations, extraction correction rate, accessibility barriers and confidence calibration.

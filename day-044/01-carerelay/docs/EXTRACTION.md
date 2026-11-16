@@ -1,0 +1,2 @@
+# Extraction design
+The prototype splits user-provided text into non-empty lines and assigns broad organizational labels using simple keyword rules. Labels are heuristic, may be wrong and are not clinical classifications. Always verify extracted content against the original.

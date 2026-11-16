@@ -1,0 +1,2 @@
+# Initial hazard register
+Extraction may omit or change an instruction: compare with original. Categories may be mistaken for priority: label them as organizational hints. Unauthorized disclosure: do not use real patient data.

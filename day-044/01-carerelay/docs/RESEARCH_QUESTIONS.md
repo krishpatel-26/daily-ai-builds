@@ -1,0 +1,2 @@
+# Research questions
+Can a checklist reduce missed follow-up tasks? Which extraction errors create confusion? How should caregivers share tasks with consent? Which languages and accessibility features are essential? How do users distinguish reminders from medical advice?

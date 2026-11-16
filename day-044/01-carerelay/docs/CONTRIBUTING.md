@@ -1,0 +1,2 @@
+# Contributing
+Keep clinical content out of generated advice. Add tests for extraction and state changes. Any feature that influences care needs clinician review, hazard analysis, privacy review and regulatory assessment.

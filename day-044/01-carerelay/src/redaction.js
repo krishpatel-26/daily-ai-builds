@@ -1,0 +1,1 @@
+export function redactCommonIdentifiers(t){return String(t||"").replace(/\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b/g,"[EMAIL REDACTED]").replace(/\b(?:\+?\d[\d ()-]{7,}\d)\b/g,"[PHONE REDACTED]")}

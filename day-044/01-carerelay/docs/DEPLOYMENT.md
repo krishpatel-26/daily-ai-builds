@@ -1,0 +1,2 @@
+# Local deployment
+Requires Node.js 20+. Run npm start and open http://127.0.0.1:4190. The server binds to loopback by default. Do not expose publicly or enter real patient information. Development demo only.

@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import {consentRecord} from "../src/consent.js";test("records scoped consent",()=>assert.equal(consentRecord({subjectId:"demo",scope:"caregiver_view",granted:true}).granted,true));test("requires scope",()=>assert.throws(()=>consentRecord({})));

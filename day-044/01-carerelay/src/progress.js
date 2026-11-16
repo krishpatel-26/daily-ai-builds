@@ -1,0 +1,1 @@
+export function progress(items=[]){const total=items.length,completed=items.filter(x=>x.done===true).length;return {total,completed,remaining:total-completed,percent:total?Math.round(completed/total*100):0}}

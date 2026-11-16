@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import {Store} from "../src/store.js";test("stores and retrieves an isolated plan",()=>{const s=new Store(),p={id:"p1",items:[]};s.save(p);assert.deepEqual(s.get("p1"),p)});test("audit log is bounded",()=>{const s=new Store();for(let i=0;i<1002;i++)s.event({i});assert.equal(s.audit().length,100)});

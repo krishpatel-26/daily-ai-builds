@@ -1,0 +1,2 @@
+# Product requirements
+Primary user: person or caregiver managing written post-visit or discharge instructions. Need: make next steps visible, reduce forgotten follow-ups, and track completion. Non-goals: diagnosis, triage, medication recommendations, dosage calculation or treatment changes.

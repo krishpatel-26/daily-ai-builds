@@ -1,0 +1,2 @@
+# Personas
+Patient: wants next steps visible. Caregiver: helps coordinate tasks with permission. Clinician: remains the authority for care instructions. These personas are design hypotheses, not validated research.

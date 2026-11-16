@@ -1,0 +1,2 @@
+# Known limitations
+No LLM, diagnosis, triage, medication scheduling, authentication, persistent database, notifications, caregiver sharing or EHR integration. Extraction is heuristic. No clinical validation.

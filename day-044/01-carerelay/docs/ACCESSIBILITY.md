@@ -1,0 +1,2 @@
+# Accessibility
+Use semantic HTML, explicit labels, keyboard-accessible controls, responsive layouts and readable contrast. Further work: screen-reader testing, localization, adjustable text size and WCAG conformance audit.

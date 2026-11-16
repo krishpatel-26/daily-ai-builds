@@ -1,0 +1,2 @@
+# User journey
+1. Receive written care instructions from clinician. 2. Paste relevant text into CareRelay. 3. Review each extracted line against original paperwork. 4. Mark completed tasks. 5. Contact the care team when wording or timing is unclear.

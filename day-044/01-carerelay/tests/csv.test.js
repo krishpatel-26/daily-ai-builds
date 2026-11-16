@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import {escapeCsv,checklistCsv} from "../src/csv.js";test("CSV quotes special fields",()=>assert.equal(escapeCsv('a,"b"'),'"a,""b"""'));test("exports task rows",()=>assert.match(checklistCsv({items:[{id:"1",text:"Call clinic",category:"follow_up",done:false}]}),/Call clinic,follow_up,no/));

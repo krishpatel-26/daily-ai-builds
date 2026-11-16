@@ -1,0 +1,2 @@
+# Clinical governance required before real-world use
+Engage clinicians, patients and caregivers in co-design. Define intended use, hazards, escalation language, accessibility, validation protocol, incident handling, change control and regulatory assessment for each deployment jurisdiction. Clinical safety review is mandatory before any clinical functionality.

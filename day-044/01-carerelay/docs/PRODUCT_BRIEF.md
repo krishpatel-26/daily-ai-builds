@@ -1,0 +1,2 @@
+# Product brief
+CareRelay organizes patient-supplied written care instructions into a checklist. It targets coordination gaps after appointments or discharge. It is not a clinical decision-support product.

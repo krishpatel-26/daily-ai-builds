@@ -1,0 +1,2 @@
+# Validation strategy
+Validate technical correctness with automated tests and usability with patients/caregivers. Clinical validity is not established by unit tests. No clinical efficacy, safety or outcome claims are made.

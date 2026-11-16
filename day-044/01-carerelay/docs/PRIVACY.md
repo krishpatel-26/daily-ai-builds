@@ -1,0 +1,2 @@
+# Privacy
+The demo stores submitted plans only in process memory; they disappear when the server stops. Do not enter names, addresses, record numbers, insurance IDs or other unnecessary identifiers. This prototype has no authentication, encryption at rest, access control, consent workflow, retention controls or compliance certification. Do not deploy with real patient data.

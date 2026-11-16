@@ -1,0 +1,1 @@
+export function reminderEligibility({optedIn=false,authenticated=false,careTeamApproved=false}={}){return {eligible:Boolean(optedIn&&authenticated&&careTeamApproved),reasons:[!optedIn&&"user_opt_in_required",!authenticated&&"authentication_required",!careTeamApproved&&"care_team_review_required"].filter(Boolean)}}

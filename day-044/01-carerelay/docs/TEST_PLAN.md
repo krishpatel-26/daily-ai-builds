@@ -1,0 +1,2 @@
+# Test plan
+Unit-test extraction, input bounds, store behavior and audit limits. Integration tests should cover malformed JSON, oversized payloads, missing plans, invalid item IDs and concurrent updates. Usability tests must verify that users understand extraction is not clinical validation.

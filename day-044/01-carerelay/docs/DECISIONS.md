@@ -1,0 +1,2 @@
+# Architecture decisions
+Use deterministic extraction rather than an LLM in the initial prototype to avoid fabricated medical content. Keep source text user-provided. No patient data should be used in this demo.

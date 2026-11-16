@@ -1,0 +1,1 @@
+export class Store{constructor(){this.plans=new Map();this.events=[]}save(plan){this.plans.set(plan.id,structuredClone(plan));return plan}get(id){return this.plans.get(id)||null}list(){return [...this.plans.values()]}event(e){this.events.push({...e,at:new Date().toISOString()});if(this.events.length>500)this.events.shift()}audit(){return this.events.slice(-100)}}

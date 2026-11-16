@@ -1,0 +1,2 @@
+# Architecture
+Browser form → HTTP API → bounded text validation → deterministic line extraction → in-memory plan store → checklist UI. No LLM inference, external API, diagnosis or treatment recommendation occurs.

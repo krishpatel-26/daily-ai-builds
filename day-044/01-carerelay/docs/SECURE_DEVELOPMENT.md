@@ -1,0 +1,2 @@
+# Secure development checklist
+Add dependency and secret scanning, static analysis, fuzzing, security headers, rate limiting, authentication, authorization, encryption, privacy review and incident response.

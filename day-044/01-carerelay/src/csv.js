@@ -1,0 +1,1 @@
+export function escapeCsv(v){const s=String(v??"");return /[",\r\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s} export function checklistCsv(p){return [["task_id","task","category","completed"],...(p.items||[]).map(x=>[x.id,x.text,x.category,x.done?"yes":"no"])].map(r=>r.map(escapeCsv).join(",")).join("\r\n")+"\r\n"}

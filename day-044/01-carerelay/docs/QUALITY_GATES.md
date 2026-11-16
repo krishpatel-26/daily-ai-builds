@@ -1,0 +1,2 @@
+# Quality gates
+No clinical claims without evidence. No patient data in demo. No reminders without opt-in and approved schedules. No caregiver access without permission. No launch without security, privacy, accessibility and clinical review.

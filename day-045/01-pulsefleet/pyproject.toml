@@ -1,0 +1,6 @@
+[project]
+name="pulsefleet"
+version="0.1.0"
+description="Robot fleet telemetry and maintenance analytics research prototype"
+requires-python=">=3.11"
+dependencies=[]

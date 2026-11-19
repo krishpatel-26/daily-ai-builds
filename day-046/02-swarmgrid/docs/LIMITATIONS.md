@@ -1,0 +1,2 @@
+# Limitations
+Simple occupied-cell blocking can deadlock; no edge-swap resolution, time-expanded A*, conflict-based search or prioritized replanning. Task allocation is greedy. No real robot physics, localization errors, communication latency, safety PLC or hardware integration.

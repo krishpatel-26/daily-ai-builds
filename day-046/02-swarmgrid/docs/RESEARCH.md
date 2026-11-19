@@ -1,0 +1,2 @@
+# Research plan
+Compare greedy assignment against Hungarian matching and auction allocation. Evaluate time-expanded A*, CBS and WHCA*. Measure makespan, task completion, collision conflicts, deadlocks and compute time over randomized maps and fleet sizes.

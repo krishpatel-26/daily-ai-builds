@@ -1,0 +1,2 @@
+# Product vision
+Research foundation for multi-robot warehouse orchestration: fleet task allocation, dynamic route replanning, traffic coordination, dispatch analytics and simulator-in-the-loop evaluation.

@@ -1,0 +1,2 @@
+# Roadmap
+Add time-expanded A*, edge-swap conflict detection, conflict-based search, auction task allocation, randomized warehouse maps, persistent metrics, ROS 2 simulator adapters and multi-seed benchmark reports.

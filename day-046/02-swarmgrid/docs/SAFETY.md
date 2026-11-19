@@ -1,0 +1,2 @@
+# Safety
+Never use routes from this prototype to control physical robots. Industrial deployments require certified safety controls, validated collision avoidance, obstacle sensing, emergency stops and system-level risk assessment.

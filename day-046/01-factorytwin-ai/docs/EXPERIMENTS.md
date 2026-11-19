@@ -1,0 +1,2 @@
+# Experiment plan
+Compare reactive and preventive maintenance over many random seeds. Vary MTBF, repair times, demand and buffer capacity. Evaluate mean cost, throughput, confidence intervals and tail outcomes. Calibrate against real plant event logs before claims.

@@ -1,0 +1,2 @@
+# Model assumptions
+Time advances in integer minutes. Machine failures are independent Bernoulli trials while idle. Buffers are finite. Workpieces enter the first machine without raw material constraints. No shift calendar, labor availability, quality defects or transport delays are modeled.

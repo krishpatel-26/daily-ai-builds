@@ -1,0 +1,2 @@
+# Threat model
+This prototype serves synthetic data on localhost. Production requires authentication, authorization, TLS, request limits, input constraints, secure logs and network isolation from operational technology.

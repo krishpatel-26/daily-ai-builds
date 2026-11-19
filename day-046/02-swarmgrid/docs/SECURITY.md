@@ -1,0 +1,2 @@
+# Security
+Local-only research API; no credentials or persistent personal data. Production hardening requires TLS, authentication, authorization, input limits, monitoring, audit logs and network isolation.

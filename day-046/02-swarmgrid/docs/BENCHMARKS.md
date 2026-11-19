@@ -1,0 +1,2 @@
+# Benchmarks
+Report task completion ratio, makespan, total path length, waiting steps, deadlocks, collisions and CPU time. Compare across seeds, warehouse layouts, obstacle densities and robot fleet sizes. No performance claims are currently established.

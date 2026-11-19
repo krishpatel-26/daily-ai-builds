@@ -1,0 +1,2 @@
+# Release checklist
+Run tests, lint code, inspect simulated throughput conservation, benchmark multiple seeds, document assumptions, review security and ensure all output labels state synthetic-data status.

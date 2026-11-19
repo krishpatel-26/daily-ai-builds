@@ -1,0 +1,2 @@
+# Architecture
+Grid world and obstacles → greedy task allocation by A* path cost → per-robot A* route concatenation → synchronous reservation-inspired traffic simulation → JSON benchmark → browser map. This is not optimal multi-agent path finding.

@@ -1,0 +1,2 @@
+# Safety
+Never use this simulation to operate equipment or override maintenance policies. Thresholds, prices, production rates and failure assumptions are synthetic. Qualified engineers must validate any operational recommendations.

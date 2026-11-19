@@ -1,0 +1,1 @@
+"""SwarmGrid multi-robot simulation."""

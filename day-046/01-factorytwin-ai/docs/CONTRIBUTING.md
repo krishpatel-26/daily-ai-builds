@@ -1,0 +1,2 @@
+# Contributing
+Add deterministic tests, document stochastic assumptions, report limitations and validate results across seeds. Avoid claims of production readiness or real-world performance without empirical evidence.

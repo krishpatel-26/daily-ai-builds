@@ -1,0 +1,2 @@
+# Test plan
+Check reproducibility, nonnegative counts, valid buffers, invalid configuration rejection, scenario ranking, Pareto dominance, response structure and boundary conditions. Validate against independent benchmark simulations before deployment.

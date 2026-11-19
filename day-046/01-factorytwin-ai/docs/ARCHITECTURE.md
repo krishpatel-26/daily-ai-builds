@@ -1,0 +1,2 @@
+# Architecture
+Configuration → seeded discrete-time simulation → per-machine events and finite buffers → KPI report → multi-seed maintenance scenario search → Pareto filter → JSON API → dashboard. This is not a real-time PLC integration.

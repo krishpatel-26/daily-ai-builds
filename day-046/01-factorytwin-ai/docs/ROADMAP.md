@@ -1,0 +1,2 @@
+# Roadmap
+Add event-driven simulation, changeover times, shift calendars, sensor ingestion, stochastic demand, scheduling constraints, queueing KPIs, calibration to historical data, sensitivity analysis and uncertainty intervals.

@@ -1,0 +1,2 @@
+# Test plan
+Verify A* path validity and obstacle avoidance; check assignment completeness; assert no duplicate final occupancy; test deadlock behavior, deterministic output and unreachable tasks. Extend to edge-swap and vertex conflict tests before planner upgrades.

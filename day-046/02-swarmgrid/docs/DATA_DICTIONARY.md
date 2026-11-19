@@ -1,0 +1,2 @@
+# Data dictionary
+Robot: id, grid position, completed tasks and travel distance. Task: id and goal cell. Route: sequence of integer grid cells. Traffic frame: robot ID to position mapping. Grid obstacles are static and known to the planner.

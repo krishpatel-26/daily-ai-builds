@@ -1,0 +1,2 @@
+# API
+GET /api/report returns baseline simulation, scenario candidates, Pareto front and illustrative best scenario. Read-only local endpoint. No authentication; bind to loopback and never expose publicly.

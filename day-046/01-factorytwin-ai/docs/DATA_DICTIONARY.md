@@ -1,0 +1,2 @@
+# Data dictionary
+cycle: processing time in minutes. mtbf: mean time between failures proxy in minutes. repair: downtime duration. maintenance: planned downtime duration. maintenance_interval: machine age threshold. buffer_capacity: maximum intermediate WIP. unit_revenue: illustrative penalty proxy for late units.

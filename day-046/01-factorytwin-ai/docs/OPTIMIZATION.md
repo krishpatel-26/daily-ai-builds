@@ -1,0 +1,2 @@
+# Optimization notes
+The optimizer compares a finite grid of policy/interval choices using the same seed set. Its selected result minimizes a synthetic cost function; it is not a proof of global optimality. Pareto filtering exposes output/cost trade-offs.

@@ -1,0 +1,2 @@
+# Model card
+DecisionLab is a deterministic, synthetic operations simulation. Outputs are illustrative policy costs, production counts and approximate intervals, not observed effects, validated risk predictions or true causal estimates. Intended only for research education and scenario exploration. Evaluation: local unit tests, basic API checks; industrial calibration and prospective validation have not been performed.

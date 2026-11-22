@@ -1,0 +1,2 @@
+# Architecture
+Untrusted agent proposal → forbidden action rules → allowlist → resource namespace → injection indicator scan → evidence ID retrieval → source and TTL checks → action/resource binding → approval gate → simulated ACCEPT/REJECT → SHA-256 chained local audit.

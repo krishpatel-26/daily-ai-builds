@@ -15,5 +15,5 @@ class Engine:
         if inspect_text(proposal.payload):return reject('INJECTION_INDICATOR','Proposal payload contains a known prompt-injection indicator.')
         ids,error=matching_evidence(proposal,evidences,now,policy['sources'])
         if error:return reject(error,'Evidence is absent, stale, untrusted, or outside the proposed action scope.')
-        if policy['approval'] and not self.approvals.valid(proposal.id,now):return reject('APPROVAL_REQUIRED','A verified approval grant is required before execution.')
+        if policy['approval'] and not self.approvals.valid(proposal.id,now):return reject('APPROVAL_REQUIRED','A simulated review grant is required before this proposal can be validated.')
         return Decision(proposal.id,True,'VALIDATED','Proposal passes this prototype policy and provenance checks.',tuple(ids))

@@ -1,0 +1,2 @@
+# Roadmap
+Time-dependent flood spread, damaged bridges and road networks, multi-trip capacity planning, equitable allocation objectives, capacity-aware shelters, probabilistic forecasts, scenario robustness, and expert-reviewed human-in-the-loop workflows. Real-world use requires independent domain validation and governance.

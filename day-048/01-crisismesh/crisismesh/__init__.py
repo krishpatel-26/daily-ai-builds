@@ -1,0 +1,1 @@
+"""CrisisMesh: synthetic disaster-response coordination laboratory."""

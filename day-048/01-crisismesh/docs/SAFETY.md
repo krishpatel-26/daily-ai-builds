@@ -1,0 +1,2 @@
+# Safety boundary
+No live data, no clinical triage, no emergency dispatch API, no recommendation for real rescue decisions. Scenario populations, hazard severity, capabilities, and travel times are fictional. Automated decisions must not determine real rescue priorities. Field professionals remain authoritative.

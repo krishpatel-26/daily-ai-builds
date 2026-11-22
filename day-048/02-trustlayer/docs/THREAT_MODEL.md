@@ -1,0 +1,2 @@
+# Threat model
+Threats: unauthorized tool calls, stale/forged evidence IDs, malicious low-trust content, unexpected action scopes and tampering with local records. Controls are illustrative and cannot stop all attacks. Production must add verified identity, cryptographic approval grants, evidence signatures, sandboxing, least-privilege credentials, safe tool execution and external audit anchoring.

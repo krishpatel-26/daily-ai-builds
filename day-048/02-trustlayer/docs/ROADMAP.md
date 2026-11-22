@@ -1,0 +1,2 @@
+# Roadmap
+Integrate an LLM in a non-executing sandbox; structured evidence with provenance and signatures; signed approval tokens bound to immutable action payload; persistent ledger with external anchoring; safe tool adapters; multiple agent roles and permissions; regression benchmarking of adversarial attacks.

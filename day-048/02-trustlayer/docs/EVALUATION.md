@@ -1,0 +1,2 @@
+# Evaluation plan
+Measure false acceptance/false rejection for allowlist policies and evidence binding, latency, approval coverage, injection recall/precision and audit chain tamper detection on labeled corpora. Compare against real adversarial prompt injection and tool-use benchmark suites, reporting missed bypasses. This prototype offers no production security guarantees.

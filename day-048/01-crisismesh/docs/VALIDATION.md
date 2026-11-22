@@ -1,0 +1,2 @@
+# Research validation plan
+Compare against shortest and no-resource-priority baselines on diverse synthetic seeds. Measure unserved high-severity cases, coverage, arrival cost, geographic fairness, team utilization and infeasibility reasons. Validate any real-world translation with domain experts and audited hydrological and road networks.

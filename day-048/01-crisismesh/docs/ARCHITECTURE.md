@@ -1,0 +1,2 @@
+# Architecture
+Seeded scenario → static flood-depth raster → team-specific traversability graph → weighted Dijkstra routing → severity-prioritized assignment → team availability and range constraints → coverage metrics → JSON API and canvas UI.

@@ -1,0 +1,2 @@
+# Research framing
+This prototype studies task grounding, symbolic hierarchical action planning, and state-validating execution. The nearest-task policy is compared with an ordered baseline under normal and dynamic-obstacle conditions. The code is not an LLM or reinforcement learning method. Research expansion should include partial observability, learned policies, vision, language embeddings, motion feasibility and physical safety supervision.

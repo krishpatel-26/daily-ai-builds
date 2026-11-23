@@ -1,0 +1,2 @@
+# Action contract
+The trusted executor supports `move` one adjacent, unblocked grid cell (costs one simulated energy unit), `pick` an object that exactly occupies the current cell when gripper is empty, and `place` a carried object at a known destination zone. Unknown actions, invented objects, wrong destinations, teleportation, and unsafe steps are rejected without mutating the world state. This does not establish physical robot safety.

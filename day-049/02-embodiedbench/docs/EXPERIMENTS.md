@@ -1,0 +1,2 @@
+# Evaluation scenarios
+Compare nearest-route task scheduling with instruction-order scheduling, both with and without an obstacle introduced during execution. Record completed tasks, movement distance, total ticks, replans, rejected actions and energy remaining. A correct symbolic result cannot establish the feasibility or safety of real manipulation. Expand to randomized maps, varied object placements, sensor uncertainty, grasp feasibility and physical simulators.

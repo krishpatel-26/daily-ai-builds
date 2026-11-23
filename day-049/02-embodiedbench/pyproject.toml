@@ -1,0 +1,6 @@
+[project]
+name = "embodiedbench"
+version = "0.1.0"
+description = "Grounded symbolic manipulation and replanning simulator"
+requires-python = ">=3.11"
+dependencies = []

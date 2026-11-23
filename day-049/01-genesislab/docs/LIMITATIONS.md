@@ -1,0 +1,2 @@
+# Known limitations
+The GP assumes a stationary smooth RBF kernel and homoskedastic Gaussian measurement noise. Its fixed hyperparameters are not learned. The finite grid is known upfront, the objective is synthetic and the safety region is deterministic. Eight benchmark seeds provide limited uncertainty information. Actual scientific progress requires domain expertise, independently verified data, physical replication and explicit experimental ethics/safety review.

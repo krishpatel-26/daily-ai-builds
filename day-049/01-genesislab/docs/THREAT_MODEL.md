@@ -1,0 +1,2 @@
+# Threat and operational model
+The service is designed only for localhost and synthetic inputs. There are no accounts, storage, access rights or real instrumentation. Before any shared deployment: add authentication, authorization, resource caps, rate limiting, audited experiment provenance, sandboxed execution, and reviewed safeguards for hazardous parameter ranges. A hypothetical language-model hypothesis generator must not bypass hard feasibility rules.

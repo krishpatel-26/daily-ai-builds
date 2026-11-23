@@ -1,0 +1,2 @@
+# API contract
+`GET /api/report?seed=49&budget=16` runs an adaptive GP optimization trial and bundles a precomputed eight-seed adaptive/random comparison. Valid seed range 0–100000. Budget 4–40. Response includes experiment history, per-step posterior prediction (when available), synthetic feasibility landscape, oracle benchmark and method comparison. `GET /` serves the browser research UI. Invalid parameters return HTTP 400 with a JSON error. No write or equipment-control endpoint exists.

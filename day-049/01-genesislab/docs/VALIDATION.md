@@ -1,0 +1,2 @@
+# Validation boundaries
+The local tests verify candidate constraints, noise reproducibility, a stable Gaussian process implementation, acquisition behavior, budget handling, initialization fairness, and HTTP response behavior. They do not validate a real materials process or general BO superiority. Future validation should add diverse objective functions, benchmark baselines, uncertainty calibration, out-of-sample comparisons, bootstrap intervals and reproducibility manifests.

@@ -1,0 +1,2 @@
+# Safety and intended use
+This is educational simulation only. The temperature and speed parameters are fictional abstract process settings and should not be translated to equipment controls. The energy index is a synthetic feasibility proxy, not a validated safety constraint. No equipment is connected. Real-world use requires risk assessment, domain-scientist approval, physical experimental protocols, and measurement calibration.

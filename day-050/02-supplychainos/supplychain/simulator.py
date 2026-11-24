@@ -2,6 +2,7 @@ from .models import SUPPLIERS,WAREHOUSES,STORES,POLICIES
 from .scenarios import demand_stream
 from .procurement import procurement_orders
 from .inventory import Inventory
+from .scenarios import availability
 
 
 def simulate(policy='diversified',seed=50,days=70,disrupted=True):
@@ -35,7 +36,7 @@ def simulate(policy='diversified',seed=50,days=70,disrupted=True):
             day_store_shipped+=qty
         total_shipped+=day_store_shipped;transport_cost+=day_store_shipped*.24
         # Orders placed across warehouses share each supplier's daily capacity.
-        remaining={s.id:s.capacity_per_day for s in SUPPLIERS}
+        remaining={s.id:int(s.capacity_per_day*availability(s.id,day,disrupted)) for s in SUPPLIERS}
         day_orders=0
         for w in WAREHOUSES:
             avg=sum(s.avg_demand for s in STORES if s.warehouse==w.id)

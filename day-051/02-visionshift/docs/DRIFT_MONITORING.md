@@ -1,0 +1,2 @@
+# Drift interpretation
+Population Stability Index compares smoothed proportions across training-quantile bins. It is a feature distribution shift statistic, not evidence of model error or defect-rate change. This prototype adds illustrative watch/investigate thresholds of 0.15 and 0.35 in a non-operational monitor. Thresholds must be calibrated per sensor, product, expected seasonal variation and false-alert budget. PSI is sensitive to binning and the reference sample.

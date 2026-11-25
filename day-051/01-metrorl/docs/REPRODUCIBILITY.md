@@ -1,0 +1,2 @@
+# Reproducibility
+Python 3.11+, standard library only. Start from project root: `python -m unittest discover -s tests -v`; `python -m metrorl.server`. Seeds in `qlearning.py` and `benchmark.py` govern experiments. Runtime generates no external requests, datasets or API bills. The benchmark uses 12 evaluation seeds and demand stress tests use three additional matched seeds. Different code revisions can change results; pin the Git commit when citing experiments.

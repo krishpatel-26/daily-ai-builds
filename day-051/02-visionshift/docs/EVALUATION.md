@@ -1,0 +1,2 @@
+# Evaluation protocol
+Eight synthetic seeds, each with a 200-sample clean training set, 180-sample stable holdout, 400-sample shifted pool and 180-sample shifted holdout. Compare the baseline to random, uncertainty and diversity selection at 55 additional labels. Metrics: precision, recall, F1, accuracy, Brier score, calibration error, confusion matrix and PSI. Report across-seed mean F1 and normal-approximation confidence intervals, not individual best runs. Since active selection can underperform random selection, do not claim guaranteed improvement.

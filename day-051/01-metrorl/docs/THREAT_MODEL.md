@@ -1,0 +1,2 @@
+# Threat model
+Read-only Python HTTP server binds to localhost, runs synthetic data and has no authentication. Do not expose the port to untrusted networks. Production systems require TLS, authorization, input validation, request limits, segregated operations networks, logging without private vehicle identifiers, and independent operational safety controls. This service has no write endpoint for signal changes.

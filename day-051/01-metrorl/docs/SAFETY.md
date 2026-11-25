@@ -1,0 +1,2 @@
+# Safety boundary
+This is an educational offline simulator; never use it to operate real traffic signals, prioritize actual emergency vehicles or modify transportation infrastructure. The model omits pedestrian protection, intergreen clearances, turning lanes, conflict matrices, travel-time distributions, road geometry, signal standards and legal priority rules. Any real-world implementation requires transport authority participation, a certified traffic controller, hardware fail-safes, evaluation and compliance review.

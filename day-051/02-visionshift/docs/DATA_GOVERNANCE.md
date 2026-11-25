@@ -1,0 +1,2 @@
+# Data governance
+Data is generated entirely in process; no camera images, personal data, manufacturing trade secrets or real defective-product information are involved. The label is an oracle outcome derived from a fictional latent function, not a human adjudication. Any production deployment needs provenance, documented sampling, consistent labeling instructions, privacy/security review, train-validation-test segregation, annotation QA, and explicit retention policy.

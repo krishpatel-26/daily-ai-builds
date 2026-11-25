@@ -1,0 +1,2 @@
+# Data dictionary
+A tick is one abstract simulation step, not calibrated real seconds. `ns` and `ew` represent aggregated vehicles waiting on each axis. `arrivals` is external vehicles admitted or lost; `transferred` counts corridor movements but not final exits. `dropped` means demand rejected when finite queues are full. `exits` are vehicles removed from the modeled network. `mean_queue` is time-averaged queued vehicles. `emergencies_served` counts simulated priority events with a matching-phase service opportunity—not validated emergency response time.

@@ -1,0 +1,2 @@
+# Known limitations
+Approach queues are aggregated; individual vehicles and intersection geometry are not modeled. Emergency events are simplified markers embedded in aggregate queues; service detection does not track exact emergency vehicle position. Changing a phase costs a single abstract lost tick. Network transfer happens at fixed fractional rates. Learned policy may fail under shifted demand; synthetic objectives do not guarantee safety, equity, or environmental benefits. No live sensors or physical deployment.

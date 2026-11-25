@@ -1,0 +1,2 @@
+# Research roadmap
+1. Add topology and multi-lane turning movements with explicit conflict matrices. 2. Calibrate vehicle arrival processes against open traffic datasets. 3. Compare queue-pressure, independent Q-learning, graph RL and policy-gradient approaches. 4. Evaluate robustness to incidents, weather and signal failures. 5. Add travel-time distributions, pedestrian phases and fairness constraints. 6. Benchmark multi-seed and multi-layout confidence intervals. 7. Integrate with SUMO only after simulator-to-real validation design.

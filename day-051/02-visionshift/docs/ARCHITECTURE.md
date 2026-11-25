@@ -1,0 +1,2 @@
+# System architecture
+A deterministic synthetic data generator creates four-dimensional numerical vectors and oracle binary defect labels. The baseline model is logistic regression trained by batch gradient descent. Monitoring computes per-feature Population Stability Index between training and shifted pools. Labeling strategies select finite budget examples from the shifted pool. The simulation reveals the labels (which real systems would obtain from humans), retrains, and evaluates on separate held-out shifted data. The HTTP service exposes a read-only research report.

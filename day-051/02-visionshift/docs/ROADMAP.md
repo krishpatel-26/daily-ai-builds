@@ -1,0 +1,2 @@
+# Roadmap
+1. Replace numerical oracle with openly licensed defect image datasets. 2. Train and evaluate a simple CNN and an established pretrained vision baseline. 3. Add embedding drift via MMD and class-proportion monitoring. 4. Compare uncertainty, core-set, diversity and disagreement acquisition. 5. Add annotator QA, abstention, class-weighted sampling and review audit. 6. Validate under sensor/camera/illumination shifts and monitor practical false-negative risks. 7. Add secure dataset ingestion and model registry integration.

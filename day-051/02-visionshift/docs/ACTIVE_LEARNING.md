@@ -1,0 +1,2 @@
+# Active learning design
+`random` selects a fixed-seed random subset; `uncertainty` selects samples closest to probability 0.5; `diversity` uses greedy farthest-first sampling in the synthetic feature space. All methods use identical label budgets and unchanged holdout datasets. The oracle label is revealed only after selection, modeling a human review step without simulating annotation errors. Real labeling workflows need reviewer disagreement tracking, costs, time limits, bias controls and escalation procedures.

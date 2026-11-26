@@ -1,0 +1,2 @@
+# Inverse localization algorithm
+For each candidate junction j, calculate a pressure drop vector from a unit leak at j relative to the no-leak baseline. Fit a nonnegative leak rate by projecting the observed drop vector onto that unit-leak pattern. Rank candidate locations by residual sum of squares. This is an interpretable inverse search, **not a learned deep model** and not calibrated probability. A small best-versus-second-best residual gap indicates ambiguous evidence.

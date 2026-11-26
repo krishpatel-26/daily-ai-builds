@@ -1,0 +1,9 @@
+{
+  "name": "contractlens-api-change-impact-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenAPI contract diff and customer integration impact analysis",
+  "scripts": { "test": "node --test", "serve": "python3 -m http.server 4173" },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,2 @@
+# Security and operational boundary
+CausalScope does not connect to live observability, read credentials or trigger rollbacks, restarts, deployments or firewall changes. It only serves local simulated data. If extended to company incident logs, add authentication, least privilege, encrypted transport/storage, data minimization, scrubbed logs, auditability and human review of every proposed action. Do not treat its rankings as verified root-cause reports.

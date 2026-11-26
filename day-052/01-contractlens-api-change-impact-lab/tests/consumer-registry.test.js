@@ -1,0 +1,3 @@
+import test from "node:test";import assert from "node:assert/strict";import {readFile} from "node:fs/promises";import {assessConsumerImpact} from "../src/core/impact.js";
+test("consumer registry uses unique IDs and known operations",async()=>{const registry=JSON.parse(await readFile(new URL("../fixtures/consumers.json",import.meta.url),"utf8"));const ids=registry.consumers.map(x=>x.id);assert.equal(new Set(ids).size,ids.length);assert.ok(registry.consumers.every(x=>x.operations.length>0));});
+test("no matching operations produces no affected customers",()=>{assert.deepEqual(assessConsumerImpact([{severity:"breaking",operation:"DELETE /absent"}],{consumers:[{id:"x",name:"X",operations:["GET /exists"]}]}),[]);});

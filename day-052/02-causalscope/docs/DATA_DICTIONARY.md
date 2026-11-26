@@ -1,0 +1,2 @@
+# Data dictionary
+Service: dependency node. Upstream/downstream arrow: modeled propagation direction. Tick: simulation time step, no wall-clock units. Latency_z and error_z: standardized synthetic anomaly readings, not real latency or error rates. Estimated_start: fitted injection tick. Estimated_strength: fitted signal amplitude. SSE: sum of squared residuals, a ranking score rather than a probability. Counterfactual reduction: modeled anomaly difference after intervention in the synthetic generator.

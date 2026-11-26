@@ -1,0 +1,8 @@
+{
+  "scope":"synthetic-demo",
+  "baseline":"Acme Commerce API 1.4.0",
+  "candidate":"Acme Commerce API 1.5.0",
+  "expectedFindingCategories":["operation-removed","required-property","parameter-required","parameter-bound","enum-value","removed-property"],
+  "expectedAffectedConsumers":["Northstar Checkout","Meridian Customer Portal","Atlas Billing Sync"],
+  "caveat":"Expected categories are illustrative regression targets. Runtime impact still requires real consumer validation."
+}

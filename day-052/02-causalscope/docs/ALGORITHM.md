@@ -1,0 +1,2 @@
+# Topology-time matching
+For each candidate root service and fault-onset tick, compute the modeled response at every downstream node using directed graph hop distance, two-tick lag and exponentially attenuated signal. Fit a nonnegative amplitude using least squares. Rank the candidates by their total residual SSE. A single-spike maximum anomaly is the deliberately simple baseline. The result is a **ranked synthetic root hypothesis**, not a proof of causality.

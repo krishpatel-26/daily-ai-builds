@@ -1,0 +1,2 @@
+# Benchmark protocol
+Enumerate nine injected leak locations across multiple random seeds. For each trial, generate noisy sensor observations and infer location and leak rate. Report top-1 location accuracy, leak-rate mean absolute error and a 1/9 uniform-location reference. Repeat with increasing Gaussian noise; emphasize degradation. All trials are synthetic and model-matched. Future evaluation must introduce topology errors, unknown demands, missing sensors, nonleak anomalies and independent nonlinear solvers.

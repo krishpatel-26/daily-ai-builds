@@ -1,0 +1,2 @@
+# Data dictionary
+Junction: ID, (x,y) map coordinates, synthetic demand. Pipe: endpoint IDs and abstract conductance. Reservoir: fixed synthetic pressure. Sensor: predicted pressure with seeded Gaussian noise. Leak rate: additional nodal outflow in the same abstract demand units. RMSE: inverse model fit error in abstract pressure units. None of these values are real-world pressure or flow measurements.

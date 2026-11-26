@@ -1,0 +1,2 @@
+# Research roadmap
+1. Add multi-root and common-cause incidents. 2. Test unknown and changing topologies. 3. Evaluate telemetry loss and nonlinear propagation. 4. Add Bayesian uncertainty rather than just point estimates. 5. Ingest open synthetic benchmark trace datasets. 6. Integrate OpenTelemetry read-only adapters with explicit consent. 7. Validate attribution quality using incident retrospectives and an independent ground-truth protocol. 8. Never permit autonomous production remediation without separately verified controls.

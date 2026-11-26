@@ -1,0 +1,2 @@
+# Research roadmap
+1. Compare against EPANET reference hydraulic solutions. 2. Add uncertain demand and missing sensor handling. 3. Model multiple leaks and sensor drift. 4. Include measurement units, elevations and pressure-dependent demand. 5. Optimize sensor placement and leak investigation cost. 6. Add probabilistic posterior intervals from validated error models. 7. Evaluate on anonymized utility benchmark cases only after governance review.
